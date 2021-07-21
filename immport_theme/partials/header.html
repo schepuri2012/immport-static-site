@@ -1,0 +1,221 @@
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+<!-- ImmPort Header -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <a class="navbar-brand active menu-immport-org" href="https://www.immport.org/home" target="_blank">
+	    <img class="main-site-logo" style="display: inline-block;" src="{{base_url}}/img/immport-icon-black-background.png" />
+      <span>ImmPort</span>
+    </a>
+    <div class="container-fluid ecoSystemHeader">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-target-menu-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-site-main" id="navbar-target-menu-collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+		    <img class="main-site-logo" src="{{base_url}}/img/immport-private-data-icon-black-background.png" />
+              Upload<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://www.immport.org/resources/dataTemplates" target="_blank">How to Upload Data</a></li>
+              <li><a href="https://immport.niaid.nih.gov/research/study/studysearchmain#/studysearch" target="_blank">Search Private Data</a></li>
+              <li><a href="https://immport.niaid.nih.gov/upload/data/uploadDataMain" target="_blank">Upload Data Package</a></li>
+              <li><a href="https://immport.niaid.nih.gov/validate/data/validateDataMain" target="_blank">Validate Data Package</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="https://www.immport.org/shared" target="_blank">
+		    <img class="main-site-logo" src="{{base_url}}/img/immport-shared-data-icon-black-background.png" />
+              Shared
+            </a>
+          </li>
+          <li>
+            <a href="https://galaxy.immport.org" target="_blank">
+		    <img class="main-site-logo" src="{{base_url}}/img/immport-data-analysis-icon-black-background.png" />
+              Analysis
+            </a>
+          </li>
+          <li>
+            <a href="https://www.immport.org/resources" target="_blank">
+		    <img class="main-site-logo" src="{{base_url}}/img/immport-resources-icon-black-background.png" />
+              Resources
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="mailto:ImmPort_Helpdesk@immport.org">Contact ImmPort</a>
+              <li><a href="https://www.immport.org/about" target="_blank">What is ImmPort?</a></li>
+              <li><a href="https://www.immport.org/cite" target="_blank">How to cite ImmPort</a></li>
+              <li><a href="https://www.immport.org/shared/news" target="_blank">News/Events</a></li>
+              <li><a href="https://www.immport.org/shared/teamCurrent" target="_blank">Team</a></li>
+              <li><a href="https://www.immport.org/shared/dataProviders" target="_blank">Data Providers</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Data<span class="caret"></span></a>
+             <ul class="dropdown-menu" role="menu">
+               <li><a href="https://browser.immport.org/browser?path=" target="_blank">Download</a></li>
+               <li><a href="https://www.immport.org/resources/dataTemplates" target="_blank">Upload</a></li>
+               <li><a href="https://www.immport.org/resources/tutorials">Tutorials</a></li>
+               <li><a href="https://galaxy.immport.org" target="_blank">Analyze</a></li>
+             </ul>
+          </li>
+        </ul>
+
+        <div class="form-group col-md-2 col-sm-2 navbar-right searchBox">
+          <form action="https://www.immport.org/search" target="_blank" method="GET">
+            <div class="input-group searchBtnGrp">
+              <span class="input-group-btn2">
+                <input name="searchTerm" type="text" class="form-control input-sm searchInput" placeholder="Search www.immport.org"/>
+              </span>
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary btn-sm searchButton" id="search"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+         </div>
+       </div>
+
+     </div>
+   </nav>
+
+
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="{{ lang.t('header.title') }}"
+  >
+
+    <!-- Link to home -->
+    <a
+      href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+      title="{{ config.site_name | e }}"
+      class="md-header__button md-logo"
+      aria-label="{{ config.site_name }}"
+      data-md-component="logo"
+    >
+      {% include "partials/logo.html" %}
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      {% include ".icons/material/menu" ~ ".svg" %}
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            {{ config.site_name }}
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            {% if page and page.meta and page.meta.title %}
+              {{ page.meta.title }}
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette -->
+    {% if not config.theme.palette is mapping %}
+      <form class="md-header__option" data-md-component="palette">
+        {% for option in config.theme.palette %}
+          {% set primary = option.primary | replace(" ", "-") | lower %}
+          {% set accent  = option.accent  | replace(" ", "-") | lower %}
+          <input
+            class="md-option"
+            data-md-color-media="{{ option.media }}"
+            data-md-color-scheme="{{ option.scheme }}"
+            data-md-color-primary="{{ primary }}"
+            data-md-color-accent="{{ accent }}"
+            {% if option.toggle %}
+              aria-label="{{ option.toggle.name }}"
+            {% else  %}
+              aria-hidden="true"
+            {% endif %}
+            type="radio"
+            name="__palette"
+            id="__palette_{{ loop.index }}"
+          />
+          {% if option.toggle %}
+            <label
+              class="md-header__button md-icon"
+              title="{{ option.toggle.name }}"
+              for="__palette_{{ loop.index0 or loop.length }}"
+              hidden
+            >
+              {% include ".icons/" ~ option.toggle.icon ~ ".svg" %}
+            </label>
+          {% endif %}
+        {% endfor %}
+      </form>
+    {% endif %}
+
+    <!-- Site language selector -->
+    {% if config.extra.alternate %}
+      <div class="md-header__option"></form>
+        <div class="md-select">
+          {% set icon = config.theme.icon.alternate or "material/translate" %}
+          <button
+            class="md-header__button md-icon"
+            aria-label="{{ lang.t('select.language.title') }}"
+          >
+            {% include ".icons/" ~ icon ~ ".svg" %}
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              {% for alt in config.extra.alternate %}
+                <li class="md-select__item">
+                  <a
+                    href="{{ alt.link | url }}"
+                    hreflang="{{ alt.lang }}"
+                    class="md-select__link"
+                  >
+                    {{ alt.name }}
+                  </a>
+                </li>
+                {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- Button to open search modal -->
+    {% if "search" in config["plugins"] %}
+      <label class="md-header__button md-icon" for="__search">
+        {% include ".icons/material/magnify.svg" %}
+      </label>
+
+      <!-- Search interface -->
+      {% include "partials/search.html" %}
+    {% endif %}
+
+    <!-- Repository information -->
+    {% if config.repo_url %}
+      <div class="md-header__source">
+        {% include "partials/source.html" %}
+      </div>
+    {% endif %}
+  </nav>
+</header>

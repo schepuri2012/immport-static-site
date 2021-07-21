@@ -1,0 +1,3602 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.11">
+    
+    
+      
+        <title>Examples - ImmPort Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3754935a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/bootstrap-3.3.7.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/ecosystem.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#offline-files-upload-request-with-authentication" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <!-- Header -->
+<header class="md-header" data-md-component="header">
+<!-- ImmPort Header -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <a class="navbar-brand active menu-immport-org" href="https://www.immport.org/home" target="_blank">
+	    <img class="main-site-logo" style="display: inline-block;" src="../../img/immport-icon-black-background.png" />
+      <span>ImmPort</span>
+    </a>
+    <div class="container-fluid ecoSystemHeader">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-target-menu-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-site-main" id="navbar-target-menu-collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+		    <img class="main-site-logo" src="../../img/immport-private-data-icon-black-background.png" />
+              Upload<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://www.immport.org/resources/dataTemplates" target="_blank">How to Upload Data</a></li>
+              <li><a href="https://immport.niaid.nih.gov/research/study/studysearchmain#/studysearch" target="_blank">Search Private Data</a></li>
+              <li><a href="https://immport.niaid.nih.gov/upload/data/uploadDataMain" target="_blank">Upload Data Package</a></li>
+              <li><a href="https://immport.niaid.nih.gov/validate/data/validateDataMain" target="_blank">Validate Data Package</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="https://www.immport.org/shared" target="_blank">
+		    <img class="main-site-logo" src="../../img/immport-shared-data-icon-black-background.png" />
+              Shared
+            </a>
+          </li>
+          <li>
+            <a href="https://galaxy.immport.org" target="_blank">
+		    <img class="main-site-logo" src="../../img/immport-data-analysis-icon-black-background.png" />
+              Analysis
+            </a>
+          </li>
+          <li>
+            <a href="https://www.immport.org/resources" target="_blank">
+		    <img class="main-site-logo" src="../../img/immport-resources-icon-black-background.png" />
+              Resources
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="mailto:ImmPort_Helpdesk@immport.org">Contact ImmPort</a>
+              <li><a href="https://www.immport.org/about" target="_blank">What is ImmPort?</a></li>
+              <li><a href="https://www.immport.org/cite" target="_blank">How to cite ImmPort</a></li>
+              <li><a href="https://www.immport.org/shared/news" target="_blank">News/Events</a></li>
+              <li><a href="https://www.immport.org/shared/teamCurrent" target="_blank">Team</a></li>
+              <li><a href="https://www.immport.org/shared/dataProviders" target="_blank">Data Providers</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Data<span class="caret"></span></a>
+             <ul class="dropdown-menu" role="menu">
+               <li><a href="https://browser.immport.org/browser?path=" target="_blank">Download</a></li>
+               <li><a href="https://www.immport.org/resources/dataTemplates" target="_blank">Upload</a></li>
+               <li><a href="https://www.immport.org/resources/tutorials">Tutorials</a></li>
+               <li><a href="https://galaxy.immport.org" target="_blank">Analyze</a></li>
+             </ul>
+          </li>
+        </ul>
+
+        <div class="form-group col-md-2 col-sm-2 navbar-right searchBox">
+          <form action="https://www.immport.org/search" target="_blank" method="GET">
+            <div class="input-group searchBtnGrp">
+              <span class="input-group-btn2">
+                <input name="searchTerm" type="text" class="form-control input-sm searchInput" placeholder="Search www.immport.org"/>
+              </span>
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary btn-sm searchButton" id="search"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+         </div>
+       </div>
+
+     </div>
+   </nav>
+
+
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    <!-- Link to home -->
+    <a
+      href="../.."
+      title="ImmPort Documentation"
+      class="md-header__button md-logo"
+      aria-label="ImmPort Documentation"
+      data-md-component="logo"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ImmPort Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Examples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette -->
+    
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+
+      <!-- Search interface -->
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Repository information -->
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dataqueryapi/" class="md-tabs__link">
+        Data Query API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../filedownload/" class="md-tabs__link">
+        File Download
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Data Upload API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../batchupdaterapi/" class="md-tabs__link">
+        Batch Updater API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tutorials/" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../datasubmission/" class="md-tabs__link">
+        Data Submission Templates
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ImmPort Documentation" class="md-nav__button md-logo" aria-label="ImmPort Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ImmPort Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Data Query API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Query API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Query API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/assayresults/" class="md-nav__link">
+        Assay Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/filepath/" class="md-nav__link">
+        File Path
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/lookuptables/" class="md-nav__link">
+        Lookup Tables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/studydetail/" class="md-nav__link">
+        Study Detail
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/pythonexamples/" class="md-nav__link">
+        Python Examples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/shellexamples/" class="md-nav__link">
+        Shell Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        File Download
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="File Download" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          File Download
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filedownload/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filedownload/tool/" class="md-nav__link">
+        Tool
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filedownload/pythonexamples/" class="md-nav__link">
+        Python Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Data Upload API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Upload API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Data Upload API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API Format and Endpoints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Examples
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#offline-files-upload-request-with-authentication" class="md-nav__link">
+    OffLine File(s) Upload Request with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zip-file-upload-request-with-authentication" class="md-nav__link">
+    Zip-File Upload Request with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-file-upload-request-with-authentication" class="md-nav__link">
+    Single File Upload Request with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-files-upload-request-with-authentication" class="md-nav__link">
+    Multiple Files Upload Request with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zip-file-upload-for-validation-with-authentication" class="md-nav__link">
+    Zip-file Upload for Validation with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-of-upload-ticket-with-authentication" class="md-nav__link">
+    Validation of Upload Ticket with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-file-upload-for-validation-request-with-authentication" class="md-nav__link">
+    Single File Upload for Validation Request with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mulitple-file-upload-for-validation-request-with-authentication" class="md-nav__link">
+    Mulitple File Upload for Validation Request with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-of-upload-ticket-with-authentication" class="md-nav__link">
+    Status of Upload Ticket with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-information-on-upload-ticket-request-with-authentication" class="md-nav__link">
+    Summary Information on Upload Ticket Request with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-information-on-upload-ticket-request-with-authentication" class="md-nav__link">
+    Database Information on Upload Ticket Request with Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-of-workspaces-request-with-authentication" class="md-nav__link">
+    Set of Workspaces Request with Authentication
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Batch Updater API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Batch Updater API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Batch Updater API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../batchupdaterapi/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../batchupdaterapi/api/" class="md-nav__link">
+        API Format and Endpoints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../batchupdaterapi/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../batchupdaterapi/examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/python/" class="md-nav__link">
+        Introduction to ImmPort Python Tutorials
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/populationmarkerparsing/" class="md-nav__link">
+        Population Marker Parsing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/fcsheadermarkingparsing/" class="md-nav__link">
+        FCS Header Marker Parsing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Data Submission Templates
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Submission Templates" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Data Submission Templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        Templates
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/adverseEvents/" class="md-nav__link">
+        Adverse Events
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/assessments/" class="md-nav__link">
+        Assessments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/basic_study_design/" class="md-nav__link">
+        Basic Study Desgin
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/bioSamples/" class="md-nav__link">
+        BioSamples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/study_design_edit/" class="md-nav__link">
+        Study Desgin Edit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/subjectHumans/" class="md-nav__link">
+        Subject Humans
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/standardCurves/" class="md-nav__link">
+        Standard Curves
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/CyTOF_Derived_data/" class="md-nav__link">
+        CyTOF Derived data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/ELISA_Results/" class="md-nav__link">
+        ELISAA Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/ELISPOT_Results/" class="md-nav__link">
+        ELISPOT Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/FCM_Derived_data/" class="md-nav__link">
+        FCM Derived data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/HAI_Results/" class="md-nav__link">
+        HAI Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/HLA_Typing/" class="md-nav__link">
+        HLA Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/KIR_Typing/" class="md-nav__link">
+        KIR Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/MBAA_Results/" class="md-nav__link">
+        MBAA Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/Mass_Spectrometry_Metabolomic_Results/" class="md-nav__link">
+        Mass Spectrometry Metabolomic Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/Mass_Spectrometry_Proteomic_Results/" class="md-nav__link">
+        Mass Spectrometry Proteomic Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/PCR_Results/" class="md-nav__link">
+        PCR Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/RNA_SEQ_Results/" class="md-nav__link">
+        RNA SEQ Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/Reagent_Sets/" class="md-nav__link">
+        Reagent Sets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/Virus_Neutralization_Results/" class="md-nav__link">
+        Virus Neutralization Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/controlSamples/" class="md-nav__link">
+        Control Samples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.CYTOF/" class="md-nav__link">
+        Experiment Samples - CyTOF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.ELISA/" class="md-nav__link">
+        Experiment Samples - ELISA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.ELISPOT/" class="md-nav__link">
+        Experiment Samples - ELISPOT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.Flow_Cytometry/" class="md-nav__link">
+        Experiment Samples - Flow Cytometry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.Gene_Expression_Array/" class="md-nav__link">
+        Experiment Samples - Gene Expression Array
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.Genotyping_Array/" class="md-nav__link">
+        Experiment Samples - Genotyping Array
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.HAI/" class="md-nav__link">
+        Experiment Samples - HAI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.HLA/" class="md-nav__link">
+        Experiment Samples - HLA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.Image_Histology/" class="md-nav__link">
+        Experiment Samples - Image Histology
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.KIR/" class="md-nav__link">
+        Experiment Samples - KIR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.MBAA/" class="md-nav__link">
+        Experiment Samples - MBAA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.Mass_Spectrometry_Metabolomics/" class="md-nav__link">
+        Experiment Samples - Mass Spectrometry Metabolomics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.Mass_Spectrometry_Proteomics/" class="md-nav__link">
+        Experiment Samples - Mass Spectrometry Proteomics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.Neutralizing_Antibody_Titer/" class="md-nav__link">
+        Experiment Samples - Neutralizing Antibody Titer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.Other/" class="md-nav__link">
+        Experiment Samples - Other
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.QRT-PCR/" class="md-nav__link">
+        Experiment Samples - QRT-PCR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.RNA_Sequencing/" class="md-nav__link">
+        Experiment Samples - RNA Sequencing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experimentSamples.Virus_Neutralization/" class="md-nav__link">
+        Experiment Samples - Virus Neutralization
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/experiments/" class="md-nav__link">
+        Experiments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/immuneExposure/" class="md-nav__link">
+        Immune Exposure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/interventions/" class="md-nav__link">
+        Interventions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/labTestPanels/" class="md-nav__link">
+        Lab Test Panels
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/labTest_Results/" class="md-nav__link">
+        Lab Test Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/labTests/" class="md-nav__link">
+        Lab Tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/protocols/" class="md-nav__link">
+        Protocols
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/publicRepositories/" class="md-nav__link">
+        Public Repositories
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.Array/" class="md-nav__link">
+        Regents - Array
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.CyTOF/" class="md-nav__link">
+        Regents - CyTOF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.ELISA/" class="md-nav__link">
+        Regents - ELISA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.ELISPOT/" class="md-nav__link">
+        Regents - ELISPOT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.Flow_Cytometry/" class="md-nav__link">
+        Regents - Flow Cytometry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.HAI/" class="md-nav__link">
+        Regents - HAI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.HLA_Typing/" class="md-nav__link">
+        Regents - HLA Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.KIR_Typing/" class="md-nav__link">
+        Regents - KIR Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.MBAA/" class="md-nav__link">
+        Regents - MBAA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.Neutralizing_Antibody_Titer/" class="md-nav__link">
+        Regents - Neutralizing Antibody Titer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.Other/" class="md-nav__link">
+        Regents - Other
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.PCR/" class="md-nav__link">
+        Regents - PCR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.Sequencing/" class="md-nav__link">
+        Regents - Sequencing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/reagents.Virus_Neutralization/" class="md-nav__link">
+        Regents - Virus Neutralization
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/subjectAnimals/" class="md-nav__link">
+        Subject Animals
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasubmission/treatments/" class="md-nav__link">
+        Treatments
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Examples</h1>
+                
+                <h2 id="offline-files-upload-request-with-authentication">OffLine File(s) Upload Request with Authentication</h2>
+<p>An offline request is not normally used, unless the ZIP package is quite large, and may be uploaded later using something like Aspera or sending the data to ImmPort using an offline technique. This type of request basically reserves an Upload Ticket in the ImmPort system and then will wait until the large zip-file is moved into the folder on the ImmPort Upload machine, usually by the ImmPort team, for processing.</p>
+<p>The following is an example of an offline request to upload a zip-file, where
+several -F parameters are used.  Note that the packageName parameter needs to be
+filled in with the name of the upload (file or directory--in this case a file
+name).  The ticket returned should have a status of <strong>Pending</strong>.  However, since no file
+(or directory) is provided, the ticket will not be acted upon until a file is
+deposited on the server in the web drop zone.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Offline Upload Request</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -X POST -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> -F <span class="s2">&quot;workspaceId=REPLACE_WITH_WORKSPACE_ID&quot;</span> -F <span class="s2">&quot;packageName=Test.Fcm_Derived_Data.Comprehensive.zip&quot;</span> -F <span class="s2">&quot;uploadNotes=&quot;</span> -F <span class="s2">&quot;uploadPurpose=uploadData&quot;</span> -F <span class="s2">&quot;serverName=&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/type/offline
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19546&quot;,
+  &quot;uploadPurpose&quot; : &quot;uploadData&quot;,
+  &quot;workspaceId&quot; : 999999,
+  &quot;status&quot; : &quot;Pending&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used to search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is a POST on the URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/type/offline</code>
+with the -F parameterization. The authentication token (<strong>"token"</strong>) is passed
+in the HTTP header as shown.  The following -F parameters need values:
+workspaceId, and packageName, while uploadNotes, and serverName can have
+optional values.  The value of <strong>uploadPurpose</strong> must be what is provided above
+<strong>as-is</strong>.</p>
+<p>The response will be JSON that provides the upload ticket number (used in
+information enpoints), the upload purpose, the workspace_id, and the current
+status of the upload request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. offlineUploadZipFile.sh) and executed at the command prompt of
+a terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password).</p>
+<div class="highlight"><pre><span></span><code>./offlineUploadZipFile.sh &gt; offlineUploadZipFile.json
+</code></pre></div>
+<h2 id="zip-file-upload-request-with-authentication">Zip-File Upload Request with Authentication</h2>
+<p>The following is an example of an online request to upload a zip-file, where
+several -F parameters are used.  Note that packageName parameter must not have a
+value.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Upload Zip-File</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -X POST -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> -F <span class="s2">&quot;workspaceId=REPLACE_WITH_WORKSPACE_ID&quot;</span> -F <span class="s2">&quot;packageName=&quot;</span> -F <span class="s2">&quot;uploadNotes=&quot;</span> -F <span class="s2">&quot;uploadPurpose=uploadData&quot;</span> -F <span class="s2">&quot;serverName=&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/Test.Fcm_Derived_Data.Comprehensive.zip&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/type/online
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+  &quot;uploadPurpose&quot; : &quot;uploadData&quot;,
+  &quot;workspaceId&quot; : 999999,
+  &quot;status&quot; : &quot;Pending&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used to search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is a POST on the URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/type/online</code>
+with the -F parameterization. The authentication token (<strong>"token"</strong>) is passed
+in the HTTP header as shown.  The following -F parameters need values:
+workspaceId and file (client-path to zip-file), while uploadNotes and serverName
+can have optional values.  The parameter <strong>packageName MUST NOT</strong> have a value.
+The value of <strong>uploadPurpose</strong> must be what is provided above <strong>as-is</strong>.</p>
+<p>The response will be JSON that provides the upload ticket number (used in
+information endpoints), the upload purpose, the workspace_id, and the current
+status of the upload request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. uploadZipFile.sh) and executed at the command prompt of
+a terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password).</p>
+<div class="highlight"><pre><span></span><code>./uploadZipFile.sh &gt; uploadZipFile.json
+</code></pre></div>
+<h2 id="single-file-upload-request-with-authentication">Single File Upload Request with Authentication</h2>
+<p>The following is an example of an online multiple file upload request with a
+single file, where several -F parameters are used.  Note that <strong>packageName</strong>
+parameter <strong>MUST HAVE</strong> a value.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Upload Single File</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -X POST -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> -F <span class="s2">&quot;workspaceId=REPLACE_WITH_WORKSPACE_ID&quot;</span> -F <span class="s2">&quot;packageName=multiPartFilesUploadSingleFile&quot;</span> -F <span class="s2">&quot;uploadNotes=&quot;</span> -F <span class="s2">&quot;uploadPurpose=uploadData&quot;</span> -F <span class="s2">&quot;serverName=&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/reagents.flow_cytometry.txt&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/type/online
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19552&quot;,
+  &quot;uploadPurpose&quot; : &quot;uploadData&quot;,
+  &quot;workspaceId&quot; : 999999,
+  &quot;status&quot; : &quot;Pending&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used to search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is a POST on the URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/type/online</code>
+with the -F parameterization. The authentication token (<strong>"token"</strong>) is passed
+in the HTTP header as shown.  The following -F parameters need values:
+workspaceId, packageName, and file (client-path to single file), while
+uploadNotes and serverName can have optional values.  The parameter
+<strong>packageName MUST HAVE</strong> a value.  The value of <strong>uploadPurpose</strong> must be what
+is provided above <strong>as-is</strong>.</p>
+<p>The response will be JSON that provides the upload ticket number (to be used in
+information endpoints), the upload purpose, the workspace_id, and the current
+status of the upload request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. uploadSingleFile.sh )and executed at the command prompt of
+a terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password).</p>
+<div class="highlight"><pre><span></span><code>./uploadSingleFile.sh &gt; uploadSingleFile.json
+</code></pre></div>
+<h2 id="multiple-files-upload-request-with-authentication">Multiple Files Upload Request with Authentication</h2>
+<p>The following is an example of an online multiple file upload request with
+multipe files, where several -F parameters are used.  Note that <strong>packageName</strong>
+parameter <strong>MUST HAVE</strong> a value.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Upload Multiple Files</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -X POST -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> -F <span class="s2">&quot;workspaceId=REPLACE_WITH_WORKSPACE_ID&quot;</span> -F <span class="s2">&quot;packageName=multiPartFilesUploadMultipleFiles&quot;</span> -F <span class="s2">&quot;uploadNotes=&quot;</span> -F <span class="s2">&quot;uploadPurpose=uploadData&quot;</span> -F <span class="s2">&quot;serverName=&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/test_GE.MA.Affy_study_protocol.txt&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/protocols.txt&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/cn01adv.txt&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/basic_study_design.txt&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/MBAA_protocol.txt&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/type/online
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19553&quot;,
+  &quot;uploadPurpose&quot; : &quot;uploadData&quot;,
+  &quot;workspaceId&quot; : 999999,
+  &quot;status&quot; : &quot;Pending&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is a POST on the URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/type/online</code>
+with the -F parameterization. The authentication token (<strong>"token"</strong>) is passed
+in the HTTP header as shown.  The following -F parameters need values:
+workspaceId, packageName, and files (client-path to multiple files), while
+uploadNotes and serverName can have optional values.  The parameter
+<strong>packageName MUST HAVE</strong> a value.  The value of <strong>uploadPurpose</strong> must be what
+is provided above <strong>as-is</strong>.</p>
+<p>The response will be JSON that provides the upload ticket number (to be used in
+information endpoints), the upload purpose, the workspace_id, and the current
+status of the upload request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. uploadMultipleFiles.sh )and executed at the command prompt of
+a terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password).</p>
+<div class="highlight"><pre><span></span><code>./uploadMultipleFiles.sh &gt; uploadMultipleFiles.json
+</code></pre></div>
+<h2 id="zip-file-upload-for-validation-with-authentication">Zip-file Upload for Validation with Authentication</h2>
+<p>The following is an example of validation of a zip-file, where several -F
+parameters are used.  Note that packageName parameter must not have a value.
+Also, validation is a two endpoint (step) process.  The first step is to upload
+the zip-file to the server and create the ticket, and the second is to request
+the validation of the zip-file.  To obtain the validation report, the user must
+obtain the database report (See Section <strong>Database Report Request with
+Authentication</strong>) using the upload ticket number obtained from the validation
+request.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Upload Zip-file for Validation</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -X POST -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> -F <span class="s2">&quot;workspaceId=REPLACE_WITH_WORKSPACE_ID&quot;</span> -F <span class="s2">&quot;packageName=&quot;</span> -F <span class="s2">&quot;uploadNotes=&quot;</span> -F <span class="s2">&quot;uploadPurpose=validateData&quot;</span> -F <span class="s2">&quot;serverName=&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/Test.Fcm_Derived_Data.Comprehensive.zip&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/type/online
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19543&quot;,
+  &quot;uploadPurpose&quot; : &quot;validateData&quot;,
+  &quot;workspaceId&quot; : 999999,
+  &quot;status&quot; : &quot;Pending_Validation&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is a POST on the URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/type/online</code>
+with the -F parameterization. The authentication token (<strong>"token"</strong>) is passed
+in the HTTP header as shown.  The following parameters need values: workspaceId
+and file (client-path to zip-file), while uploadNotes and serverName can have
+optional values.  The parameter <strong>packageName MUST NOT</strong> have a value.  The
+value of <strong>uploadPurpose</strong> must be what is provided above <strong>as-is</strong>.</p>
+<p>The response will be JSON that provides the upload ticket number (to used in
+information endpoints), the upload purpose, the workspace_id, and the current
+status of the validation request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. validateUploadZipFile.sh )and executed at the command prompt of a
+terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password)</p>
+<div class="highlight"><pre><span></span><code>./validateUploadZipFile.sh &gt; validateUploadZipFile.json
+</code></pre></div>
+<h2 id="validation-of-upload-ticket-with-authentication">Validation of Upload Ticket with Authentication</h2>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Request Upload Ticket Validation</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -X POST -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> -F <span class="s2">&quot;uploadTicketNumber=testuser_20180523_19543&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/validation
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19543&quot;,
+  &quot;status&quot; : &quot;Completed_Validation&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is a POST on the URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/validation</code>
+The authentication token (<strong>"token"</strong>) is passed in the HTTP header as shown.
+The <strong>-F parameter uploadTicketNumber</strong> must contain the upload ticket number
+obtained from the the upload request response above (<strong>Upload Zip File to
+Server</strong>).</p>
+<p>The response will be a JSON that provides the upload ticket number (to be used in
+information endpoints) and the current status of the validation request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. validateZipFile.sh )and executed at the command prompt of a
+terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password)</p>
+<div class="highlight"><pre><span></span><code>./validateZipFile.sh &gt; validateZipFile.json
+</code></pre></div>
+<h2 id="single-file-upload-for-validation-request-with-authentication">Single File Upload for Validation Request with Authentication</h2>
+<p>The following is an example of validation of a single file, where several -F
+parameters are used.  Note that <strong>packageName</strong> parameter <strong>MUST HAVE</strong> a value.
+Also, validation is a two endpoint (step) process.  The first step is to upload
+the zip-file to the server and create the ticket, and the second is to request
+the validation of the zip-file (See SubSection <strong>Validate Validation Request</strong>
+above).  To obtain the validation report, the user must obtain the database
+report (See Section <strong>Database Report Request with Authentication</strong>) using the
+upload ticket number obtained from the validation request.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Single File Upload Validation</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -X POST -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> -F <span class="s2">&quot;workspaceId=REPLACE_WITH_WORKSPACE_ID&quot;</span> -F <span class="s2">&quot;packageName=multiPartFilesValidateOneFile&quot;</span> -F <span class="s2">&quot;uploadNotes=&quot;</span> -F <span class="s2">&quot;uploadPurpose=validateData&quot;</span> -F <span class="s2">&quot;serverName=&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/reagents.flow_cytometry.txt&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/type/online
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19550&quot;,
+  &quot;uploadPurpose&quot; : &quot;validateData&quot;,
+  &quot;workspaceId&quot; : 999999,
+  &quot;status&quot; : &quot;Pending_Validation&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is a POST on the URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/type/online</code>
+with the -F parameterization. The authentication token (<strong>"token"</strong>) is passed
+in the HTTP header as shown.  The following parameters need values: workspaceId,
+packageName and file (client-path to single file), while uploadNotes and
+serverName can have optional values.  The parameter <strong>packageName MUST HAVE</strong> a
+value.  The value of <strong>uploadPurpose</strong> must be what is provided above <strong>as-is</strong>.</p>
+<p>The response will be JSON that provides the upload ticket number (to be used in
+information endpoints), the upload purpose, the workspace_id, and the current status
+of the validation request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. validateUploadSingleFile.sh )and executed at the command prompt of a
+terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password)</p>
+<div class="highlight"><pre><span></span><code>./validateUploadSingleFile.sh &gt; validateUploadSingleFile.json
+</code></pre></div>
+<h2 id="mulitple-file-upload-for-validation-request-with-authentication">Mulitple File Upload for Validation Request with Authentication</h2>
+<p>The following is an example of validation of a multiple files, where several 
+-F parameters are used.  Note that <strong>packageName</strong> parameter <strong>MUST HAVE</strong> a
+value.  Also, validation is a two endpoint (step) process.  The first step is to
+upload the zip-file to the server and create the ticket, and the second is to
+request the validation of the zip-file (See SubSection <strong>Validate Validation
+Request</strong> above).  To obtain the validation report, the user must obtain the
+database report (See Section <strong>Database Report Request with Authentication</strong>)
+using the upload ticket number obtained from the validation request.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Multiple File Upload Validation</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -X POST -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> -F <span class="s2">&quot;workspaceId=REPLACE_WITH_WORKSPACE_ID&quot;</span> -F <span class="s2">&quot;packageName=multiPartFilesValidateMultipleFiles&quot;</span> -F <span class="s2">&quot;uploadNotes=&quot;</span> -F <span class="s2">&quot;uploadPurpose=validateData&quot;</span> -F <span class="s2">&quot;serverName=&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/test_GE.MA.Affy_study_protocol.txt&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/protocols.txt&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/cn01adv.txt&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/basic_study_design.txt&quot;</span> -F <span class="s2">&quot;file=@/home/tsmith/Downloads/MBAA_protocol.txt&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/type/online
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19551&quot;,
+  &quot;uploadPurpose&quot; : &quot;validateData&quot;,
+  &quot;workspaceId&quot; : 999999,
+  &quot;status&quot; : &quot;Pending_Validation&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is a POST on the URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/type/online</code>
+with the -F parameterization. The authentication token (<strong>"token"</strong>) is passed
+in the HTTP header as shown.  The following parameters need values: workspaceId,
+packageName and file (client-path to each of multiple files), while uploadNotes
+and serverName can have optional values.  The parameter <strong>packageName MUST
+HAVE</strong> a value.  The value of <strong>uploadPurpose</strong> must be what is provided above
+<strong>as-is</strong>.</p>
+<p>The response will be JSON that provides the upload ticket number (to be used in
+information endpoints), the upload purpose, the workspace_id, and the current
+status of the validation request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. validateUploadMultipleFiles.sh )and executed at the command
+prompt of a terminal and the output can be directed to a file. (Please replace
+the REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with
+your password)</p>
+<div class="highlight"><pre><span></span><code>./validateUploadMultipleFiles.sh &gt; validateUploadMultipleFiles.json
+</code></pre></div>
+<h2 id="status-of-upload-ticket-with-authentication">Status of Upload Ticket with Authentication</h2>
+<p>The following is an example of a request for status of an upload ticket number
+where an inline parameter (UPLOAD_TICKET_NUMBER) is used.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Status of Upload Ticket</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/registration/testuser_20180523_19544/status
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+  &quot;status&quot; : &quot;Completed&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is an inline Non-POST URL
+<code>/data/upload/registration/testuser_20180523_19544/status</code>
+with the inline parameterization, UPLOAD_TICKET_NUMBER. The authentication token
+(<strong>"token"</strong>) is passed in the HTTP header as shown.</p>
+<p>The response will be JSON that provides the current status of the request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. uploadStatus.sh )and executed at the command prompt of
+a terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password).</p>
+<div class="highlight"><pre><span></span><code>./uploadStatus.sh &gt; uploadStatus.json
+</code></pre></div>
+<h2 id="summary-information-on-upload-ticket-request-with-authentication">Summary Information on Upload Ticket Request with Authentication</h2>
+<p>The following is an example of a request for summary report status of a
+validation using an upload ticket number, where an inline parameter
+(UPLOAD_TICKET_NUMBER) is used.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Summary Information for Upload Ticket</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/registration/testuser_20180523_19543/reports/summary
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;summary&quot; : {
+    &quot;uploadRegistrationId&quot; : 19543,
+    &quot;workspaceName&quot; : &quot;Test Creation Scripts I&quot;,
+    &quot;fileName&quot; : &quot;Test.Fcm_Derived_Data.Comprehensive.zip&quot;,
+    &quot;status&quot; : &quot;Completed_Validation&quot;,
+    &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19543&quot;,
+    &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+    &quot;createdBy&quot; : &quot;testuser&quot;,
+    &quot;uploadMethod&quot; : &quot;Secure Web&quot;,
+    &quot;uploadRegistrationResults&quot; : [ {
+      &quot;uploadRegistrationResultId&quot; : 1101351,
+      &quot;description&quot; : &quot;server name:client-server&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;Test.Fcm_Derived_Data.Comprehensive.zip&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Completed_Validation&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19543&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    } ]
+  },
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19543&quot;,
+  &quot;type&quot; : &quot;summary&quot;
+}
+</code></pre></div>
+</details>
+<p>The following is an example of a request for summary report status of an upload
+using an upload ticket number, where an inline parameter (UPLOAD_TICKET_NUMBER)
+is used.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Summary Report for Upload Ticket</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/registration/testuser_20180523_19544/reports/summary
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;summary&quot; : {
+    &quot;uploadRegistrationId&quot; : 19544,
+    &quot;workspaceName&quot; : &quot;Test Creation Scripts I&quot;,
+    &quot;fileName&quot; : &quot;Test.Fcm_Derived_Data.Comprehensive.zip&quot;,
+    &quot;status&quot; : &quot;Completed&quot;,
+    &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+    &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+    &quot;createdBy&quot; : &quot;testuser&quot;,
+    &quot;uploadMethod&quot; : &quot;Secure Web&quot;,
+    &quot;uploadRegistrationResults&quot; : [ {
+      &quot;uploadRegistrationResultId&quot; : 1101260,
+      &quot;description&quot; : &quot;server name:client-server&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;Test.Fcm_Derived_Data.Comprehensive.zip&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Registered&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101261,
+      &quot;description&quot; : null,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;testuser_20180523_19544___Test.Fcm_Derived_Data.Comprehensive.zip&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Started&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101262,
+      &quot;description&quot; : &quot;Template: protocols.txt, Size:748 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;protocols.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101263,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;protocols.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101264,
+      &quot;description&quot; : &quot;Size:748 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;protocols.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101265,
+      &quot;description&quot; : &quot;Size:48046 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;Splenic_B_cell_isolation.pdf&quot;,
+      &quot;lineNumber&quot; : 4,
+      &quot;status&quot; : &quot;Stored in:protocols&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101266,
+      &quot;description&quot; : &quot;Size:13743 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;Culture_conditions.pdf&quot;,
+      &quot;lineNumber&quot; : 5,
+      &quot;status&quot; : &quot;Stored in:protocols&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101267,
+      &quot;description&quot; : &quot;Size:18944 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FlowCytometryProtocol.xls&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Stored in:protocols&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101268,
+      &quot;description&quot; : &quot;Size:30 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;example animal study protocol.txt&quot;,
+      &quot;lineNumber&quot; : 7,
+      &quot;status&quot; : &quot;Stored in:protocols&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101269,
+      &quot;description&quot; : &quot;Template: protocols.txt, Size:748 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;protocols.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101270,
+      &quot;description&quot; : &quot;Template: reagents.flow_cytometry.txt, Size:1157 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;reagents.flow_cytometry.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101271,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;reagents.flow_cytometry.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101272,
+      &quot;description&quot; : &quot;Size:1157 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;reagents.flow_cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101273,
+      &quot;description&quot; : &quot;Template: reagents.flow_cytometry.txt, Size:1157 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;reagents.flow_cytometry.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101274,
+      &quot;description&quot; : &quot;Template: reagent_sets.txt, Size:458 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;reagent_sets.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101275,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;reagent_sets.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101276,
+      &quot;description&quot; : &quot;Size:458 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;reagent_sets.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101277,
+      &quot;description&quot; : &quot;Template: reagent_sets.txt, Size:458 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;reagent_sets.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101278,
+      &quot;description&quot; : &quot;Template: treatments.txt, Size:420 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;treatments.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101279,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;treatments.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101280,
+      &quot;description&quot; : &quot;Size:420 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;treatments.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101281,
+      &quot;description&quot; : &quot;Template: treatments.txt, Size:420 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;treatments.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101282,
+      &quot;description&quot; : &quot;Template: basic_study_design.txt, Size:1877 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;basic_study_design.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101283,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;basic_study_design.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101284,
+      &quot;description&quot; : &quot;Size:1877 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;basic_study_design.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101285,
+      &quot;description&quot; : &quot;Size:92 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;Information_1.txt&quot;,
+      &quot;lineNumber&quot; : 46,
+      &quot;status&quot; : &quot;Stored in:study_file&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101286,
+      &quot;description&quot; : &quot;Template: basic_study_design.txt, Size:1877 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;basic_study_design.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101287,
+      &quot;description&quot; : &quot;Template: subjectsanimal.txt, Size:889 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;subjectsAnimal.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101288,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;subjectsAnimal.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101289,
+      &quot;description&quot; : &quot;Size:889 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;subjectsAnimal.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101290,
+      &quot;description&quot; : &quot;Template: subjectsanimal.txt, Size:889 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;subjectsAnimal.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101291,
+      &quot;description&quot; : &quot;Template: biosamples.txt, Size:1547 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;bioSamples.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101292,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;bioSamples.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101293,
+      &quot;description&quot; : &quot;Size:1547 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;bioSamples.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101294,
+      &quot;description&quot; : &quot;Template: biosamples.txt, Size:1547 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;bioSamples.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101295,
+      &quot;description&quot; : &quot;Template: experiments.txt, Size:545 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experiments.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101296,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experiments.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101297,
+      &quot;description&quot; : &quot;Size:545 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experiments.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101298,
+      &quot;description&quot; : &quot;Template: experiments.txt, Size:545 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experiments.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101299,
+      &quot;description&quot; : &quot;Template: experimentsamples.flow_cytometry.txt, Size:1038 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101300,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101301,
+      &quot;description&quot; : &quot;Size:1038 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 2,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101302,
+      &quot;description&quot; : &quot;The combined status for expsample_id (FlowCyt ES 101806_1) and table expsample has values:  expsample_required (yes), expsample_user_defined_id (FlowCyt ES 101806_1), and expsample_accession ().&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101303,
+      &quot;description&quot; : &quot;The combined status for biosample_id (Splenic_B-cells_untreated) and table biosample has values:  biosample_required (no), biosample_user_defined_id (Splenic_B-cells_untreated), and biosample_accession (BS935311).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101304,
+      &quot;description&quot; : &quot;The combined status for experiment_id (FlowCyt Expt) and table experiment has values:  experiment_required (no), experiment_user_defined_id (FlowCyt Expt), and experiment_accession (EXP15457).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101305,
+      &quot;description&quot; : &quot;The parent accession biosample_study_accession (SDY1897) was set using the table biosample and biosample_accession (BS935311).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101306,
+      &quot;description&quot; : &quot;The parent accession experiment_study_accession (SDY1897) was set using the table experiment and experiment_accession (EXP15457).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101307,
+      &quot;description&quot; : &quot;The value in experiment_study_accession (SDY1897) is assigned to study_accession.&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 3,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101308,
+      &quot;description&quot; : &quot;Size:201530 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;Specimen_001_Tube_001.fcs&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101309,
+      &quot;description&quot; : &quot;Size:10446 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101310,
+      &quot;description&quot; : &quot;Size:201631 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;CompensationTube_001.fcs&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101311,
+      &quot;description&quot; : &quot;Size:201631 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;CompensationTube_002.fcs&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101312,
+      &quot;description&quot; : &quot;The combined status for expsample_id (FlowCyt ES 101806_2) and table expsample has values:  expsample_required (yes), expsample_user_defined_id (FlowCyt ES 101806_2), and expsample_accession ().&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 4,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101313,
+      &quot;description&quot; : &quot;The combined status for biosample_id (Splenic_B-cells_treated_with_BAFF) and table biosample has values:  biosample_required (no), biosample_user_defined_id (Splenic_B-cells_treated_with_BAFF), and biosample_accession (BS935312).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 4,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101314,
+      &quot;description&quot; : &quot;The combined status for experiment_id (FlowCyt Expt) and table experiment has values:  experiment_required (no), experiment_user_defined_id (FlowCyt Expt), and experiment_accession (EXP15457).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 4,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101315,
+      &quot;description&quot; : &quot;The parent accession biosample_study_accession (SDY1897) was set using the table biosample and biosample_accession (BS935312).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 4,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101316,
+      &quot;description&quot; : &quot;The parent accession experiment_study_accession (SDY1897) was set using the table experiment and experiment_accession (EXP15457).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 4,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101317,
+      &quot;description&quot; : &quot;The value in experiment_study_accession (SDY1897) is assigned to study_accession.&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 4,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101318,
+      &quot;description&quot; : &quot;Size:201530 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;Specimen_001_Tube_002.fcs&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101319,
+      &quot;description&quot; : &quot;The combined status for expsample_id (FlowCyt ES 101806_3) and table expsample has values:  expsample_required (yes), expsample_user_defined_id (FlowCyt ES 101806_3), and expsample_accession ().&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 5,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101320,
+      &quot;description&quot; : &quot;The combined status for biosample_id (Splenic_B-cells_treated_with_Anti-IgM) and table biosample has values:  biosample_required (no), biosample_user_defined_id (Splenic_B-cells_treated_with_Anti-IgM), and biosample_accession (BS935313).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 5,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101321,
+      &quot;description&quot; : &quot;The combined status for experiment_id (FlowCyt Expt) and table experiment has values:  experiment_required (no), experiment_user_defined_id (FlowCyt Expt), and experiment_accession (EXP15457).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 5,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101322,
+      &quot;description&quot; : &quot;The parent accession biosample_study_accession (SDY1897) was set using the table biosample and biosample_accession (BS935313).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 5,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101323,
+      &quot;description&quot; : &quot;The parent accession experiment_study_accession (SDY1897) was set using the table experiment and experiment_accession (EXP15457).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 5,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101324,
+      &quot;description&quot; : &quot;The value in experiment_study_accession (SDY1897) is assigned to study_accession.&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 5,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101325,
+      &quot;description&quot; : &quot;Size:201529 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;Specimen_001_Tube_003.fcs&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101326,
+      &quot;description&quot; : &quot;The combined status for expsample_id (FlowCyt ES 101806_4) and table expsample has values:  expsample_required (yes), expsample_user_defined_id (FlowCyt ES 101806_4), and expsample_accession ().&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101327,
+      &quot;description&quot; : &quot;The combined status for biosample_id (Splenic_B-cells_treated_with_BAFF_and_anti-IgM) and table biosample has values:  biosample_required (no), biosample_user_defined_id (Splenic_B-cells_treated_with_BAFF_and_anti-IgM), and biosample_accession (BS935314).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101328,
+      &quot;description&quot; : &quot;The combined status for experiment_id (FlowCyt Expt) and table experiment has values:  experiment_required (no), experiment_user_defined_id (FlowCyt Expt), and experiment_accession (EXP15457).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101329,
+      &quot;description&quot; : &quot;The parent accession biosample_study_accession (SDY1897) was set using the table biosample and biosample_accession (BS935314).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101330,
+      &quot;description&quot; : &quot;The parent accession experiment_study_accession (SDY1897) was set using the table experiment and experiment_accession (EXP15457).&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101331,
+      &quot;description&quot; : &quot;The value in experiment_study_accession (SDY1897) is assigned to study_accession.&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101332,
+      &quot;description&quot; : &quot;Size:201529 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;Specimen_001_Tube_004.fcs&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101333,
+      &quot;description&quot; : &quot;Template: experimentsamples.flow_cytometry.txt, Size:1038 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;experimentSamples.Flow_Cytometry.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101334,
+      &quot;description&quot; : &quot;Template: fcm_derived_data.txt, Size:10446 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsing&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101335,
+      &quot;description&quot; : &quot;Validation Level = Standard&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101336,
+      &quot;description&quot; : &quot;Size:1149 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.workspace.txt&quot;,
+      &quot;lineNumber&quot; : 75,
+      &quot;status&quot; : &quot;Stored in:file_info&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101337,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD14+, HLA-DRhi CD16+\&quot; has a preferred value \&quot;CD14+, HLADRhi, CD16+\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 4,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101338,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD14lo, HLA-DR+, CD16+\&quot; has a preferred value \&quot;CD14lo, HLADR+, CD16+\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 5,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101339,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD25high CD127LO\&quot; has a preferred value \&quot;IL2RAhigh, CD127LO\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 6,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101340,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD14-CD56+CD3++\&quot; has a preferred value \&quot;CD14-, CD56+, CD3++\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 36,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101341,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD27++CD38++\&quot; has a preferred value \&quot;CD27++, CD38++\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 37,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101342,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD3-CD14-CD19+IgD-CD20-CD27+CD38++\&quot; has a preferred value \&quot;CD3-, CD14-, CD19+, IgD-, CD20-, CD27+, CD38++\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 39,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101343,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD45RA+ Naive\&quot; has a preferred value \&quot;CD45RA+\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 53,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101344,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD16+ neutrophil\&quot; has a preferred value \&quot;CD16+\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 55,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101345,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD16+ granulocyte\&quot; has a preferred value \&quot;CD16+\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 56,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101346,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD16+, CD62L- granulocyte\&quot; has a preferred value \&quot;CD16+, CD62L-\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 57,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101347,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD14nCD16n_pmo\&quot; has a preferred value \&quot;CD14-, CD16-\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 64,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101348,
+      &quot;description&quot; : &quot;\&quot;Gating Definition Reported\&quot; field with value \&quot;CD14pCD16n_pmo\&quot; has a preferred value \&quot;CD14+, CD16-\&quot; and the preferred value is assigned to the population_defnition_preferred field&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : 67,
+      &quot;status&quot; : &quot;Information&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101349,
+      &quot;description&quot; : &quot;Template: fcm_derived_data.txt, Size:10446 bytes&quot;,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;FCM_derived_data.txt&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Parsed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    }, {
+      &quot;uploadRegistrationResultId&quot; : 1101350,
+      &quot;description&quot; : null,
+      &quot;errorMessage&quot; : null,
+      &quot;fileName&quot; : &quot;testuser_20180523_19544___Test.Fcm_Derived_Data.Comprehensive.zip&quot;,
+      &quot;lineNumber&quot; : null,
+      &quot;status&quot; : &quot;Completed&quot;,
+      &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+      &quot;dateCreated&quot; : &quot;2018-05-23&quot;,
+      &quot;createdBy&quot; : &quot;testuser&quot;,
+      &quot;dateLastUpdated&quot; : &quot;2018-05-23&quot;,
+      &quot;lastUpdatedBy&quot; : &quot;testuser&quot;
+    } ]
+  },
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+  &quot;type&quot; : &quot;summary&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is an inline Non-POST URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/registration/testuser_20180522_19504/reports/summary</code>
+with the inline parameterization, UPLOAD_TICKET_NUMBER. The authentication token
+(<strong>"token"</strong>) is passed in the HTTP header as shown.</p>
+<p>The response will be JSON that provides the summary of the upload request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. uploadSummaryReport.sh )and executed at the command prompt of
+a terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password).</p>
+<div class="highlight"><pre><span></span><code>./uploadSummaryReport.sh &gt; uploadSummaryReport.json
+</code></pre></div>
+<h2 id="database-information-on-upload-ticket-request-with-authentication">Database Information on Upload Ticket Request with Authentication</h2>
+<p>The following is an example of a request for the database report for a
+validation using an upload ticket number where an inline parameter
+(UPLOAD_TICKET_NUMBER) is used.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Database Information for Upload Ticket</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/registration/testuser_20180523_19543/reports/database
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><p>``` response
+{
+  "database" : "The validation report is based on ImmPort workspace (workspace_id = 999999).\nThe validation report was generated on 2018-05-23-14:22:48.\nThe data package file submitted was /home/immport/data/immport-data-upload-server/webupload_drop_zone/testuser_20180523_19543<strong><em>Test.Fcm</em>Derived_Data.Comprehensive.zip.\n\nFile Name\tLine Number\tStatus\tError Message\tDescription\nprotocols.txt\t\tParsing\t\tTemplate: protocols.txt, Size:748 bytes\nprotocols.txt\t\tInformation\t\tValidation Level = Standard\nprotocols.txt\t3\tStored in:file_info\t\tSize:748 bytes\nSplenic_B_cell_isolation.pdf\t4\tStored in:protocols\t\tSize:48046 bytes\nCulture_conditions.pdf\t5\tStored in:protocols\t\tSize:13743 bytes\nFlowCytometryProtocol.xls\t6\tStored in:protocols\t\tSize:18944 bytes\nexample animal study protocol.txt\t7\tStored in:protocols\t\tSize:30 bytes\nprotocols.txt\t\tParsed\t\tTemplate: protocols.txt, Size:748 bytes\nreagents.flow_cytometry.txt\t\tParsing\t\tTemplate: reagents.flow_cytometry.txt, Size:1157 bytes\nreagents.flow_cytometry.txt\t\tInformation\t\tValidation Level = Standard\nreagents.flow_cytometry.txt\t3\tStored in:file_info\t\tSize:1157 bytes\nreagents.flow_cytometry.txt\t\tParsed\t\tTemplate: reagents.flow_cytometry.txt, Size:1157 bytes\nreagent_sets.txt\t\tParsing\t\tTemplate: reagent_sets.txt, Size:458 bytes\nreagent_sets.txt\t\tInformation\t\tValidation Level = Standard\nreagent_sets.txt\t3\tStored in:file_info\t\tSize:458 bytes\nreagent_sets.txt\t\tParsed\t\tTemplate: reagent_sets.txt, Size:458 bytes\ntreatments.txt\t\tParsing\t\tTemplate: treatments.txt, Size:420 bytes\ntreatments.txt\t\tInformation\t\tValidation Level = Standard\ntreatments.txt\t3\tStored in:file_info\t\tSize:420 bytes\ntreatments.txt\t\tParsed\t\tTemplate: treatments.txt, Size:420 bytes\nbasic_study_design.txt\t\tParsing\t\tTemplate: basic_study_design.txt, Size:1877 bytes\nbasic_study_design.txt\t\tInformation\t\tValidation Level = Standard\nbasic_study_design.txt\t3\tStored in:file_info\t\tSize:1877 bytes\nInformation_1.txt\t46\tStored in:study_file\t\tSize:92 bytes\nbasic_study_design.txt\t\tParsed\t\tTemplate: basic_study_design.txt, Size:1877 bytes\nsubjectsAnimal.txt\t\tParsing\t\tTemplate: subjectsanimal.txt, Size:889 bytes\nsubjectsAnimal.txt\t\tInformation\t\tValidation Level = Standard\nsubjectsAnimal.txt\t3\tStored in:file_info\t\tSize:889 bytes\nsubjectsAnimal.txt\t\tParsed\t\tTemplate: subjectsanimal.txt, Size:889 bytes\nbioSamples.txt\t\tParsing\t\tTemplate: biosamples.txt, Size:1547 bytes\nbioSamples.txt\t\tInformation\t\tValidation Level = Standard\nbioSamples.txt\t3\tStored in:file_info\t\tSize:1547 bytes\nbioSamples.txt\t\tParsed\t\tTemplate: biosamples.txt, Size:1547 bytes\nexperiments.txt\t\tParsing\t\tTemplate: experiments.txt, Size:545 bytes\nexperiments.txt\t\tInformation\t\tValidation Level = Standard\nexperiments.txt\t3\tStored in:file_info\t\tSize:545 bytes\nexperiments.txt\t\tParsed\t\tTemplate: experiments.txt, Size:545 bytes\nexperimentSamples.Flow_Cytometry.txt\t\tParsing\t\tTemplate: experimentsamples.flow_cytometry.txt, Size:1038 bytes\nexperimentSamples.Flow_Cytometry.txt\t\tInformation\t\tValidation Level = Standard\nexperimentSamples.Flow_Cytometry.txt\t2\tStored in:file_info\t\tSize:1038 bytes\nexperimentSamples.Flow_Cytometry.txt\t3\tInformation\t\tThe combined status for expsample_id (FlowCyt ES 101806_1) and table expsample has values:  expsample_required (yes), expsample_user_defined_id (FlowCyt ES 101806_1), and expsample_accession ().\nexperimentSamples.Flow_Cytometry.txt\t3\tInformation\t\tThe combined status for biosample_id (Splenic_B-cells_untreated) and table biosample has values:  biosample_required (no), biosample_user_defined_id (Splenic_B-cells_untreated), and biosample_accession (BS1000000071).\nexperimentSamples.Flow_Cytometry.txt\t3\tInformation\t\tThe combined status for experiment_id (FlowCyt Expt) and table experiment has values:  experiment_required (no), experiment_user_defined_id (FlowCyt Expt), and experiment_accession (EXP1000000080).\nexperimentSamples.Flow_Cytometry.txt\t3\tInformation\t\tThe parent accession biosample_study_accession (SDY1000000045) was set using the table biosample and biosample_accession (BS1000000071).\nexperimentSamples.Flow_Cytometry.txt\t3\tInformation\t\tThe parent accession experiment_study_accession (SDY1000000045) was set using the table experiment and experiment_accession (EXP1000000080).\nexperimentSamples.Flow_Cytometry.txt\t3\tInformation\t\tThe value in experiment_study_accession (SDY1000000045) is assigned to study_accession.\nSpecimen_001_Tube_001.fcs\t6\tStored in:file_info\t\tSize:201530 bytes\nFCM_derived_data.txt\t6\tStored in:file_info\t\tSize:10446 bytes\nCompensationTube_001.fcs\t6\tStored in:file_info\t\tSize:201631 bytes\nCompensationTube_002.fcs\t6\tStored in:file_info\t\tSize:201631 bytes\nexperimentSamples.Flow_Cytometry.txt\t4\tInformation\t\tThe combined status for expsample_id (FlowCyt ES 101806_2) and table expsample has values:  expsample_required (yes), expsample_user_defined_id (FlowCyt ES 101806_2), and expsample_accession ().\nexperimentSamples.Flow_Cytometry.txt\t4\tInformation\t\tThe combined status for biosample_id (Splenic_B-cells_treated_with_BAFF) and table biosample has values:  biosample_required (no), biosample_user_defined_id (Splenic_B-cells_treated_with_BAFF), and biosample_accession (BS1000000072).\nexperimentSamples.Flow_Cytometry.txt\t4\tInformation\t\tThe combined status for experiment_id (FlowCyt Expt) and table experiment has values:  experiment_required (no), experiment_user_defined_id (FlowCyt Expt), and experiment_accession (EXP1000000080).\nexperimentSamples.Flow_Cytometry.txt\t4\tInformation\t\tThe parent accession biosample_study_accession (SDY1000000045) was set using the table biosample and biosample_accession (BS1000000072).\nexperimentSamples.Flow_Cytometry.txt\t4\tInformation\t\tThe parent accession experiment_study_accession (SDY1000000045) was set using the table experiment and experiment_accession (EXP1000000080).\nexperimentSamples.Flow_Cytometry.txt\t4\tInformation\t\tThe value in experiment_study_accession (SDY1000000045) is assigned to study_accession.\nSpecimen_001_Tube_002.fcs\t6\tStored in:file_info\t\tSize:201530 bytes\nexperimentSamples.Flow_Cytometry.txt\t5\tInformation\t\tThe combined status for expsample_id (FlowCyt ES 101806_3) and table expsample has values:  expsample_required (yes), expsample_user_defined_id (FlowCyt ES 101806_3), and expsample_accession ().\nexperimentSamples.Flow_Cytometry.txt\t5\tInformation\t\tThe combined status for biosample_id (Splenic_B-cells_treated_with_Anti-IgM) and table biosample has values:  biosample_required (no), biosample_user_defined_id (Splenic_B-cells_treated_with_Anti-IgM), and biosample_accession (BS1000000073).\nexperimentSamples.Flow_Cytometry.txt\t5\tInformation\t\tThe combined status for experiment_id (FlowCyt Expt) and table experiment has values:  experiment_required (no), experiment_user_defined_id (FlowCyt Expt), and experiment_accession (EXP1000000080).\nexperimentSamples.Flow_Cytometry.txt\t5\tInformation\t\tThe parent accession biosample_study_accession (SDY1000000045) was set using the table biosample and biosample_accession (BS1000000073).\nexperimentSamples.Flow_Cytometry.txt\t5\tInformation\t\tThe parent accession experiment_study_accession (SDY1000000045) was set using the table experiment and experiment_accession (EXP1000000080).\nexperimentSamples.Flow_Cytometry.txt\t5\tInformation\t\tThe value in experiment_study_accession (SDY1000000045) is assigned to study_accession.\nSpecimen_001_Tube_003.fcs\t6\tStored in:file_info\t\tSize:201529 bytes\nexperimentSamples.Flow_Cytometry.txt\t6\tInformation\t\tThe combined status for expsample_id (FlowCyt ES 101806_4) and table expsample has values:  expsample_required (yes), expsample_user_defined_id (FlowCyt ES 101806_4), and expsample_accession ().\nexperimentSamples.Flow_Cytometry.txt\t6\tInformation\t\tThe combined status for biosample_id (Splenic_B-cells_treated_with_BAFF_and_anti-IgM) and table biosample has values:  biosample_required (no), biosample_user_defined_id (Splenic_B-cells_treated_with_BAFF_and_anti-IgM), and biosample_accession (BS1000000074).\nexperimentSamples.Flow_Cytometry.txt\t6\tInformation\t\tThe combined status for experiment_id (FlowCyt Expt) and table experiment has values:  experiment_required (no), experiment_user_defined_id (FlowCyt Expt), and experiment_accession (EXP1000000080).\nexperimentSamples.Flow_Cytometry.txt\t6\tInformation\t\tThe parent accession biosample_study_accession (SDY1000000045) was set using the table biosample and biosample_accession (BS1000000074).\nexperimentSamples.Flow_Cytometry.txt\t6\tInformation\t\tThe parent accession experiment_study_accession (SDY1000000045) was set using the table experiment and experiment_accession (EXP1000000080).\nexperimentSamples.Flow_Cytometry.txt\t6\tInformation\t\tThe value in experiment_study_accession (SDY1000000045) is assigned to study_accession.\nSpecimen_001_Tube_004.fcs\t6\tStored in:file_info\t\tSize:201529 bytes\nexperimentSamples.Flow_Cytometry.txt\t\tParsed\t\tTemplate: experimentsamples.flow_cytometry.txt, Size:1038 bytes\nFCM_derived_data.txt\t\tParsing\t\tTemplate: fcm_derived_data.txt, Size:10446 bytes\nFCM_derived_data.txt\t\tInformation\t\tValidation Level = Standard\nFCM_derived_data.workspace.txt\t75\tStored in:file_info\t\tSize:1149 bytes\nFCM_derived_data.txt\t4\tInformation\t\t\"Gating Definition Reported\" field with value \"CD14+, HLA-DRhi CD16+\" has a preferred value \"CD14+, HLADRhi, CD16+\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t5\tInformation\t\t\"Gating Definition Reported\" field with value \"CD14lo, HLA-DR+, CD16+\" has a preferred value \"CD14lo, HLADR+, CD16+\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t6\tInformation\t\t\"Gating Definition Reported\" field with value \"CD25high CD127LO\" has a preferred value \"IL2RAhigh, CD127LO\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t36\tInformation\t\t\"Gating Definition Reported\" field with value \"CD14-CD56+CD3++\" has a preferred value \"CD14-, CD56+, CD3++\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t37\tInformation\t\t\"Gating Definition Reported\" field with value \"CD27++CD38++\" has a preferred value \"CD27++, CD38++\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t39\tInformation\t\t\"Gating Definition Reported\" field with value \"CD3-CD14-CD19+IgD-CD20-CD27+CD38++\" has a preferred value \"CD3-, CD14-, CD19+, IgD-, CD20-, CD27+, CD38++\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t53\tInformation\t\t\"Gating Definition Reported\" field with value \"CD45RA+ Naive\" has a preferred value \"CD45RA+\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t55\tInformation\t\t\"Gating Definition Reported\" field with value \"CD16+ neutrophil\" has a preferred value \"CD16+\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t56\tInformation\t\t\"Gating Definition Reported\" field with value \"CD16+ granulocyte\" has a preferred value \"CD16+\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t57\tInformation\t\t\"Gating Definition Reported\" field with value \"CD16+, CD62L- granulocyte\" has a preferred value \"CD16+, CD62L-\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t64\tInformation\t\t\"Gating Definition Reported\" field with value \"CD14nCD16n_pmo\" has a preferred value \"CD14-, CD16-\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t67\tInformation\t\t\"Gating Definition Reported\" field with value \"CD14pCD16n_pmo\" has a preferred value \"CD14+, CD16-\" and the preferred value is assigned to the population_defnition_preferred field\nFCM_derived_data.txt\t\tParsed\t\tTemplate: fcm_derived_data.txt, Size:10446 bytes\nnobody_20180523_1000000001</strong>_testuser_20180523_19543___Test.Fcm_Derived_Data.Comprehensive.zip\t\tCompleted\t\t\n",
+  "uploadTicketNumber" : "testuser_20180523_19543",
+  "type" : "database"
+}</p>
+</details>
+<p>```</p>
+<p>The following is an example of a request for the database report for an upload
+using an upload ticket number where an inline parameter (UPLOAD_TICKET_NUMBER)
+is used.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Database Information for Upload Ticket</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> https://immport-upload.niaid.nih.gov:8443/data/upload/registration/testuser_20180523_19544/reports/database
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;database&quot; : &quot;EXPERIMENT DATA UPLOAD REPORT\r\n=============================\r\n\r\nREPORT DATE:                 23-MAY-2018 09:50:02\r\nWORKSPACE_ID:                999999 NAME Test Creation Scripts I\r\nSUBMISSION TICKET NUMBER:    testuser_20180523_19544\r\nSUBMITTER:                   user, test s\r\nSUBMITTER USERNAME:          testuser\r\nSUBMISSION DATE/TIME:        23-MAY-2018 01:45:45 PM\r\nUPLOAD PACKAGE ZIP FILENAME: Test.Fcm_Derived_Data.Comprehensive.zip\r\nUPLOAD PACKAGE ZIP FILESIZE: 902979\r\nUPLOAD METHOD:               Secure Web\r\n\r\n\r\n\r\nFILENAME: experiments.txt    Total records: 1\r\n-------------------------------------------------------------\r\nUSER_DEFINED_ID\tEXPERIMENT_ACCESSION\tNAME\tMEASUREMENT_TECHNIQUE\tDESCRIPTION\r\nFlowCyt Expt\tEXP15457\tAnnexin+6 color staining 10/18/06\tFlow Cytometry\tComparison of survival and differentiati\r\n\r\n\r\nFILENAME: experimentSamples.Flow_Cytometry.txt    Total records: 4\r\n-------------------------------------------------------------\r\nUSER_DEFINED_ID\tEXPSAMPLE_ACCESSION\tNAME\tRESULT_SCHEMA\tUSER_DEFINED_ID:EXPERIMENT_ACCESSION\r\nFlowCyt ES 101806_1\tES1089595\t-\tFCM\tFlowCyt Expt:EXP15457\r\nFlowCyt ES 101806_2\tES1089596\t-\tFCM\tFlowCyt Expt:EXP15457\r\nFlowCyt ES 101806_3\tES1089597\t-\tFCM\tFlowCyt Expt:EXP15457\r\nFlowCyt ES 101806_4\tES1089598\t-\tFCM\tFlowCyt Expt:EXP15457\r\n\r\n\r\nFILENAME: bioSamples.txt    Total records: 5\r\n-------------------------------------------------------------\r\nUSER_DEFINED_ID\tBIOSAMPLE_ACCESSION\tNAME\tDESCRIPTION\tTYPE\tSUBTYPE\r\nSplenic_B-cells\tBS935310\tSplenic B-cells\tB cells from spleen of C57BL/6 WT mice\tRed Blood Cell\tB cells\r\nSplenic_B-cells_untreated\tBS935311\tSplenic_B-cells_untreated\tB cells cultured in media alone for 48hr\tRed Blood Cell\tB cells\r\nSplenic_B-cells_treated_with_BAFF\tBS935312\tSplenic_B-cells_treated_with_BAFF\tB cells cultured in media + BAFF for 48h\tRed Blood Cell\tB cells\r\nSplenic_B-cells_treated_with_Anti-IgM\tBS935313\tSplenic_B-cells_treated_with_Anti-IgM\tB cells cultured in media + anti-IgM for\tRed Blood Cell\tB cells\r\nSplenic_B-cells_treated_with_BAFF_and_anti-IgM\tBS935314\tSplenic_B-cells_treated_with_BAFF_and_anti-IgM\tB cells cultured in media + BAFF + anti-\tRed Blood Cell\tB cells\r\n\r\n\r\nFILENAME: subjectsAnimal.txt    Total records: 4\r\n-------------------------------------------------------------\r\nUSER_DEFINED_ID\tSUBJECT_ACCESSION\tDESCRIPTION\tGENDER\tSPECIES\r\ncontrol 1\tSUB182413\t-\tFemale\tMus musculus\r\nvaccinated 1\tSUB182414\t-\tMale\tMus musculus\r\ncontrol 2\tSUB182415\t-\tFemale\tMus musculus\r\nvaccinated 2\tSUB182416\t-\tMale\tMus musculus\r\n\r\n\r\nFILENAME: protocols.txt    Total records: 4\r\n-------------------------------------------------------------\r\nUSER_DEFINED_ID\tPROTOCOL_ACCESSION\tFILE_NAME\tPATH\r\nFlowCyt Protocol\tPTL10549\tFlowCytometryProtocol.xls\tworkspace/999999/protocol/FlowCytometryProtocol.PTL10549.xls\r\nexample animal study protocol\tPTL10550\texample animal study protocol.txt\tworkspace/999999/protocol/example animal study protocol.PTL10550.txt\r\nFlowCyt Splenic B cell isolation\tPTL10547\tSplenic_B_cell_isolation.pdf\tworkspace/999999/protocol/Splenic_B_cell_isolation.PTL10547.pdf\r\nFlowCyt Culture conditions\tPTL10548\tCulture_conditions.pdf\tworkspace/999999/protocol/Culture_conditions.PTL10548.pdf\r\n\r\n\r\nFILENAME: basic_study_design.txt    Total records: 1\r\n-------------------------------------------------------------\r\nSTUDY_FILE_ACCESSION\tFILE_NAME\tPATH\r\nSFL20719\tInformation_1.txt\tworkspace/999999/study/SDY1897/study_file/Information_1.txt\r\n\r\n\r\nFILENAME: --None--    Total records: 0\r\n-------------------------------------------------------------\r\nSCHEMATIC_ACCESSION\tFILE_NAME\tPATH\r\n\r\n\r\nFILENAME: reagents.flow_cytometry.txt\r\n    Total Reagent records:           8\r\n    Total Reagent records (Non-Set): 7\r\n    Total Reagent records (Set)    : 1\r\n    Reagent Set information detail : 1 Set(s) containing 7 items\r\n    Total Analyte records created  : 7\r\n-------------------------------------------------------------\r\nUSER_DEFINED_ID\tREAGENT_ACCESSION\tIS_SET\tname\r\nFlowCyt Annexin V FITC\tESR20959\tN\tAnnexin V\r\nFlowCyt anti CD24 PE\tESR20960\tN\tanti-CD24 antibody\r\nFlowCyt anti IgD bio SA PerCP\tESR20961\tN\tanti-IgD antibody\r\nFlowCyt anti AA4.1 APC\tESR20962\tN\tanti-AA4.1 antibody\r\nFlowCyt anti CD23 PE Cy7\tESR20963\tN\tanti-CD23 antibody\r\nFlowCyt anti CD23 PE CP\tESR20964\tN\tanti-CD19 antibody\r\nFlowCyt anti CD21 Pac blue\tESR20965\tN\tanti-CD21 antibody\r\nFlowCyt Self-made Staining cocktail\tESR20966\tY\thome made reagent\r\n\r\n\r\nLIST OF FILENAME(S) IN PACKAGE      Total Files: 22\r\n-------------------------------------------------------------\r\nFILE_STATUS\tFILE_SIZE (BYTES)\tFILE_NAME\tPATH\r\nParsed\t10446\tFCM_derived_data.txt\tworkspace/999999/file_info/template/FCM_derived_data.636567.txt\r\nParsed\t1877\tbasic_study_design.txt\tworkspace/999999/file_info/template/basic_study_design.636561.txt\r\nParsed\t1547\tbioSamples.txt\tworkspace/999999/file_info/template/bioSamples.636563.txt\r\nParsed\t1038\texperimentSamples.Flow_Cytometry.txt\tworkspace/999999/file_info/template/experimentSamples.Flow_Cytometry.636565.txt\r\nParsed\t545\texperiments.txt\tworkspace/999999/file_info/template/experiments.636564.txt\r\nParsed\t748\tprotocols.txt\tworkspace/999999/file_info/template/protocols.636557.txt\r\nParsed\t458\treagent_sets.txt\tworkspace/999999/file_info/template/reagent_sets.636559.txt\r\nParsed\t1157\treagents.flow_cytometry.txt\tworkspace/999999/file_info/template/reagents.flow_cytometry.636558.txt\r\nParsed\t889\tsubjectsAnimal.txt\tworkspace/999999/file_info/template/subjectsAnimal.636562.txt\r\nParsed\t420\ttreatments.txt\tworkspace/999999/file_info/template/treatments.636560.txt\r\nStored in:file_info\t201631\tCompensationTube_001.fcs\tworkspace/999999/study/SDY1897/file_info/60/8/CompensationTube_001.636568.fcs\r\nStored in:file_info\t201631\tCompensationTube_002.fcs\tworkspace/999999/study/SDY1897/file_info/60/9/CompensationTube_002.636569.fcs\r\nStored in:file_info\t1149\tFCM_derived_data.workspace.txt\tworkspace/999999/study/SDY1897/file_info/70/3/FCM_derived_data.workspace.636573.txt\r\nStored in:file_info\t201530\tSpecimen_001_Tube_001.fcs\tworkspace/999999/study/SDY1897/file_info/60/6/Specimen_001_Tube_001.636566.fcs\r\nStored in:file_info\t201530\tSpecimen_001_Tube_002.fcs\tworkspace/999999/study/SDY1897/file_info/70/0/Specimen_001_Tube_002.636570.fcs\r\nStored in:file_info\t201529\tSpecimen_001_Tube_003.fcs\tworkspace/999999/study/SDY1897/file_info/70/1/Specimen_001_Tube_003.636571.fcs\r\nStored in:file_info\t201529\tSpecimen_001_Tube_004.fcs\tworkspace/999999/study/SDY1897/file_info/70/2/Specimen_001_Tube_004.636572.fcs\r\nStored in:protocols\t0\tCulture_conditions.pdf\t-\r\nStored in:protocols\t0\tFlowCytometryProtocol.xls\t-\r\nStored in:protocols\t0\tSplenic_B_cell_isolation.pdf\t-\r\nStored in:protocols\t0\texample animal study protocol.txt\t-\r\nStored in:study_file\t0\tInformation_1.txt\t-\r\n\r\nCount Report (uploadTicketNumber = testuser_20180523_19544):\r\n\r\nupload_registration = 1\r\nupload_registration_result = 91\r\n\r\nWorkspace_2_* Counts\r\nworkspace_2_assessment_panel = 0\r\nworkspace_2_biosample = 5\r\nworkspace_2_control_sample = 0\r\nworkspace_2_experiment = 1\r\nworkspace_2_expsample = 4\r\nworkspace_2_file_info = 17\r\nworkspace_2_lab_test_panel = 0\r\nworkspace_2_protocol = 4\r\nworkspace_2_reagent = 8\r\nworkspace_2_standard_curve = 0\r\nworkspace_2_study = 1\r\nworkspace_2_subject = 4\r\nworkspace_2_treatment = 4\r\n\r\nNon-Study Table Counts\r\nprotocol = 4\r\nreagent = 8\r\nreagent_set_2_reagent = 7\r\ntreatment = 4\r\n\r\nStudy Table Counts\r\nstudy = 1\r\nstudy_2_panel = 8\r\nstudy_2_protocol = 1\r\ncontract_grant_2_study = 0\r\narm_or_cohort = 2\r\ninclusion_exclusion = 2\r\nperiod = 1\r\nplanned_visit = 1\r\nstudy_file = 1\r\nstudy_image = 0\r\nstudy_link = 1\r\nstudy_personnel = 1\r\nstudy_pubmed = 1\r\nadverse_event = 0\r\nassessment_panel = 0\r\nassessment_2_file_info = 0\r\nassessment_component = 0\r\nintervention = 0\r\nlab_test_panel = 0\r\nlab_test_panel_2_protocol = 0\r\nlab_test = 0\r\n\r\nStudy Meta-Data Table Counts\r\nsubject = 4\r\narm_2_subject = 4\r\nbiosample = 5\r\nbiosample_2_treatment = 1\r\nexperiment = 1\r\nexperiment_2_protocol = 3\r\nfile_info = 17\r\nexpsample = 4\r\nexpsample_mbaa_detail = 0\r\nexpsample_public_repository = 0\r\nimmune_exposure = 0\r\nexpsample_2_biosample = 4\r\nexpsample_2_file_info = 14\r\nexpsample_2_reagent = 32\r\nexpsample_2_treatment = 4\r\ncontrol_sample = 0\r\ncontrol_sample_2_file_info = 0\r\nstandard_curve = 0\r\nstandard_curve_2_file_info = 0\r\nfcs_header = 4\r\nfcs_header_marker = 40\r\nfcs_analyzed_result_marker = 383\r\n\r\nResult Table Counts\r\nmbaa_result = 0\r\nfcs_analyzed_result = 73\r\nelisa_result = 0\r\nelispot_result = 0\r\nhai_result = 0\r\nhla_typing_result = 0\r\nkir_typing_result = 0\r\nneut_ab_titer_result = 0\r\npcr_result = 0\r\nrna_seq_result = 0\r\n\r\nOther Non-Upload Table Counts\r\nplanned_visit_2_arm = 0\r\nprotocol_deviation = 0\r\nfcs_header_marker_2_reagent = 0\r\nreference_range = 0\r\nreported_early_termination = 0\r\nstudy_categorization = 0\r\nstudy_data_release = 0\r\nstudy_glossary = 0\r\nsubject_measure_definition = 0\r\nsubject_measure_result = 0\r\n&quot;,
+  &quot;uploadTicketNumber&quot; : &quot;testuser_20180523_19544&quot;,
+  &quot;type&quot; : &quot;database&quot;
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is an inline Non-POST URL
+<code>https://immport-upload.niaid.nih.gov:8443/data/upload/registration/testuser_20180522_19504/reports/database</code>
+with the inline parameterization UPLOAD_TICKET_NUMBER. The authentication token
+(<strong>"token"</strong>) is passed in the HTTP header as shown.</p>
+<p>The response will be JSON that provides the database report of the upload request.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. uploadDatabaseport.sh )and executed at the command prompt of
+a terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password).</p>
+<div class="highlight"><pre><span></span><code>./uploadDatabaseport.sh &gt; uploadDatabaseport.json
+</code></pre></div>
+<h2 id="set-of-workspaces-request-with-authentication">Set of Workspaces Request with Authentication</h2>
+<p>The following is an example of a request for the set of workspace upon which the
+user can upload and validate data.</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Script - Workspaces for a User</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">token</span><span class="o">=</span><span class="sb">`</span>curl -X POST https://auth.immport.org/auth/token -d <span class="nv">username</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_USERNAME&quot;</span> -d <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;REPLACE_WITH_PASSWORD&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> fgrep <span class="s1">&#39;&quot;token&quot;&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*&quot;token&quot; : &quot;//;s/&quot;.*$//&#39;</span><span class="sb">`</span>
+
+curl -k -H <span class="s2">&quot;Authorization: bearer </span><span class="nv">$token</span><span class="s2">&quot;</span> https://immport-upload.niaid.nih.gov:8443/workspaces
+</code></pre></div>
+</div>
+<details class="example"><summary>Results</summary><div class="highlight"><pre><span></span><code>{
+  &quot;workspaces&quot; : [ {
+    &quot;workspaceId&quot; : 999999,
+    &quot;name&quot; : &quot;Test Creation Scripts I&quot;,
+    &quot;type&quot; : &quot;PW&quot;,
+    &quot;category&quot; : &quot;LSR&quot;,
+    &quot;dateCreated&quot; : 1524159239000,
+    &quot;dateLastUpdated&quot; : 1524159239000,
+    &quot;createdBy&quot; : &quot;tsmith&quot;,
+    &quot;lastUpdatedBy&quot; : &quot;SYSTEM&quot;
+  }, {
+    &quot;workspaceId&quot; : 999996,
+    &quot;name&quot; : &quot;Test Creation Scripts III&quot;,
+    &quot;type&quot; : &quot;PW&quot;,
+    &quot;category&quot; : &quot;LSR&quot;,
+    &quot;dateCreated&quot; : 1524158615000,
+    &quot;dateLastUpdated&quot; : 1524158615000,
+    &quot;createdBy&quot; : &quot;tsmith&quot;,
+    &quot;lastUpdatedBy&quot; : &quot;SYSTEM&quot;
+  }, {
+    &quot;workspaceId&quot; : 999998,
+    &quot;name&quot; : &quot;Test Creation Scripts III&quot;,
+    &quot;type&quot; : &quot;PW&quot;,
+    &quot;category&quot; : &quot;LSR&quot;,
+    &quot;dateCreated&quot; : 1524159474000,
+    &quot;dateLastUpdated&quot; : 1524159474000,
+    &quot;createdBy&quot; : &quot;tsmith&quot;,
+    &quot;lastUpdatedBy&quot; : &quot;SYSTEM&quot;
+  }, {
+    &quot;workspaceId&quot; : 5768,
+    &quot;name&quot; : &quot;Test Workspace for user testuser&quot;,
+    &quot;type&quot; : &quot;PW&quot;,
+    &quot;category&quot; : &quot;TEST&quot;,
+    &quot;dateCreated&quot; : 1516303125000,
+    &quot;dateLastUpdated&quot; : 1516303125000,
+    &quot;createdBy&quot; : &quot;testadmin&quot;,
+    &quot;lastUpdatedBy&quot; : &quot;testadmin&quot;
+  }, {
+    &quot;workspaceId&quot; : 5787,
+    &quot;name&quot; : &quot;test assessments&quot;,
+    &quot;type&quot; : &quot;PW&quot;,
+    &quot;category&quot; : &quot;TEST&quot;,
+    &quot;dateCreated&quot; : 1519228020000,
+    &quot;dateLastUpdated&quot; : 1519228020000,
+    &quot;createdBy&quot; : &quot;pattybe&quot;,
+    &quot;lastUpdatedBy&quot; : &quot;pattybe&quot;
+  } ]
+}
+</code></pre></div>
+</details>
+<p>The first line is a POST to the authentication URL
+<code>https://auth.immport.org/auth/token</code> with the username and password to get an
+authentication token. The fgrep command is used search the response for a token
+and then assign the value of the token to an environment variable named
+<strong>"token"</strong>.</p>
+<p>The second line is a Non-POST URL
+<code>https://immport-upload.niaid.nih.gov:8443/workspaces</code>
+The authentication token (<strong>"token"</strong>) is passed in the HTTP header as shown.</p>
+<p>The response will be JSON that provides the list of workspaces upon which a user may upload and validate.</p>
+<p>The above shell script or any code starting with #!/bin/bash can be copied to a
+.sh file (e.g. workspaces.sh )and executed at the command prompt of
+a terminal and the output can be directed to a file. (Please replace the
+REPLACE_WITH_USERNAME with your username, and REPLACE_WITH_PASSWORD with your
+password).</p>
+<div class="highlight"><pre><span></span><code>./workspaces.sh &gt; workspaces.json
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../authentication/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Authentication" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Authentication
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../batchupdaterapi/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Overview
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.integrate", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+        <script src="../../javascripts/jquery-3.2.1.js"></script>
+      
+        <script src="../../javascripts/bootstrap-3.3.7.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2036 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.11">
+    
+    
+      
+        <title>Overview - ImmPort Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3754935a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/bootstrap-3.3.7.css">
+    
+      <link rel="stylesheet" href="../stylesheets/ecosystem.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <!-- Header -->
+<header class="md-header" data-md-component="header">
+<!-- ImmPort Header -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <a class="navbar-brand active menu-immport-org" href="https://www.immport.org/home" target="_blank">
+	    <img class="main-site-logo" style="display: inline-block;" src="../img/immport-icon-black-background.png" />
+      <span>ImmPort</span>
+    </a>
+    <div class="container-fluid ecoSystemHeader">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-target-menu-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-site-main" id="navbar-target-menu-collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+		    <img class="main-site-logo" src="../img/immport-private-data-icon-black-background.png" />
+              Upload<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://www.immport.org/resources/dataTemplates" target="_blank">How to Upload Data</a></li>
+              <li><a href="https://immport.niaid.nih.gov/research/study/studysearchmain#/studysearch" target="_blank">Search Private Data</a></li>
+              <li><a href="https://immport.niaid.nih.gov/upload/data/uploadDataMain" target="_blank">Upload Data Package</a></li>
+              <li><a href="https://immport.niaid.nih.gov/validate/data/validateDataMain" target="_blank">Validate Data Package</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="https://www.immport.org/shared" target="_blank">
+		    <img class="main-site-logo" src="../img/immport-shared-data-icon-black-background.png" />
+              Shared
+            </a>
+          </li>
+          <li>
+            <a href="https://galaxy.immport.org" target="_blank">
+		    <img class="main-site-logo" src="../img/immport-data-analysis-icon-black-background.png" />
+              Analysis
+            </a>
+          </li>
+          <li>
+            <a href="https://www.immport.org/resources" target="_blank">
+		    <img class="main-site-logo" src="../img/immport-resources-icon-black-background.png" />
+              Resources
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="mailto:ImmPort_Helpdesk@immport.org">Contact ImmPort</a>
+              <li><a href="https://www.immport.org/about" target="_blank">What is ImmPort?</a></li>
+              <li><a href="https://www.immport.org/cite" target="_blank">How to cite ImmPort</a></li>
+              <li><a href="https://www.immport.org/shared/news" target="_blank">News/Events</a></li>
+              <li><a href="https://www.immport.org/shared/teamCurrent" target="_blank">Team</a></li>
+              <li><a href="https://www.immport.org/shared/dataProviders" target="_blank">Data Providers</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Data<span class="caret"></span></a>
+             <ul class="dropdown-menu" role="menu">
+               <li><a href="https://browser.immport.org/browser?path=" target="_blank">Download</a></li>
+               <li><a href="https://www.immport.org/resources/dataTemplates" target="_blank">Upload</a></li>
+               <li><a href="https://www.immport.org/resources/tutorials">Tutorials</a></li>
+               <li><a href="https://galaxy.immport.org" target="_blank">Analyze</a></li>
+             </ul>
+          </li>
+        </ul>
+
+        <div class="form-group col-md-2 col-sm-2 navbar-right searchBox">
+          <form action="https://www.immport.org/search" target="_blank" method="GET">
+            <div class="input-group searchBtnGrp">
+              <span class="input-group-btn2">
+                <input name="searchTerm" type="text" class="form-control input-sm searchInput" placeholder="Search www.immport.org"/>
+              </span>
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary btn-sm searchButton" id="search"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+         </div>
+       </div>
+
+     </div>
+   </nav>
+
+
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    <!-- Link to home -->
+    <a
+      href=".."
+      title="ImmPort Documentation"
+      class="md-header__button md-logo"
+      aria-label="ImmPort Documentation"
+      data-md-component="logo"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ImmPort Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette -->
+    
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+
+      <!-- Search interface -->
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Repository information -->
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../dataqueryapi/" class="md-tabs__link">
+        Data Query API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../filedownload/" class="md-tabs__link">
+        File Download
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../datauploadapi/" class="md-tabs__link">
+        Data Upload API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../batchupdaterapi/" class="md-tabs__link">
+        Batch Updater API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorials/" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Data Submission Templates
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ImmPort Documentation" class="md-nav__button md-logo" aria-label="ImmPort Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ImmPort Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Data Query API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Query API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Query API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataqueryapi/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataqueryapi/assayresults/" class="md-nav__link">
+        Assay Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataqueryapi/filepath/" class="md-nav__link">
+        File Path
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataqueryapi/lookuptables/" class="md-nav__link">
+        Lookup Tables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataqueryapi/studydetail/" class="md-nav__link">
+        Study Detail
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataqueryapi/pythonexamples/" class="md-nav__link">
+        Python Examples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataqueryapi/shellexamples/" class="md-nav__link">
+        Shell Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        File Download
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="File Download" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          File Download
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filedownload/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filedownload/tool/" class="md-nav__link">
+        Tool
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filedownload/pythonexamples/" class="md-nav__link">
+        Python Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Data Upload API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Upload API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Data Upload API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datauploadapi/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datauploadapi/api/" class="md-nav__link">
+        API Format and Endpoints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datauploadapi/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datauploadapi/examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Batch Updater API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Batch Updater API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Batch Updater API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batchupdaterapi/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batchupdaterapi/api/" class="md-nav__link">
+        API Format and Endpoints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batchupdaterapi/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batchupdaterapi/examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/python/" class="md-nav__link">
+        Introduction to ImmPort Python Tutorials
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/populationmarkerparsing/" class="md-nav__link">
+        Population Marker Parsing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/fcsheadermarkingparsing/" class="md-nav__link">
+        FCS Header Marker Parsing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Data Submission Templates
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Submission Templates" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Data Submission Templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Overview
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-template-processing" class="md-nav__link">
+    Standard Template Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-loading-order" class="md-nav__link">
+    Template Loading Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-table-information" class="md-nav__link">
+    Upload Table Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlled-vocabulary" class="md-nav__link">
+    Controlled Vocabulary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-and-user-defined-id-information" class="md-nav__link">
+    Key and User Defined ID Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    Conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule" class="md-nav__link">
+    Rule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-queries" class="md-nav__link">
+    Validation Queries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-info-information" class="md-nav__link">
+    File Info Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-file-information" class="md-nav__link">
+    Save File Information
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        Templates
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="adverseEvents/" class="md-nav__link">
+        Adverse Events
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assessments/" class="md-nav__link">
+        Assessments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basic_study_design/" class="md-nav__link">
+        Basic Study Desgin
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bioSamples/" class="md-nav__link">
+        BioSamples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="study_design_edit/" class="md-nav__link">
+        Study Desgin Edit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="subjectHumans/" class="md-nav__link">
+        Subject Humans
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="standardCurves/" class="md-nav__link">
+        Standard Curves
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CyTOF_Derived_data/" class="md-nav__link">
+        CyTOF Derived data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ELISA_Results/" class="md-nav__link">
+        ELISAA Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ELISPOT_Results/" class="md-nav__link">
+        ELISPOT Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FCM_Derived_data/" class="md-nav__link">
+        FCM Derived data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HAI_Results/" class="md-nav__link">
+        HAI Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HLA_Typing/" class="md-nav__link">
+        HLA Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="KIR_Typing/" class="md-nav__link">
+        KIR Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MBAA_Results/" class="md-nav__link">
+        MBAA Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Mass_Spectrometry_Metabolomic_Results/" class="md-nav__link">
+        Mass Spectrometry Metabolomic Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Mass_Spectrometry_Proteomic_Results/" class="md-nav__link">
+        Mass Spectrometry Proteomic Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PCR_Results/" class="md-nav__link">
+        PCR Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RNA_SEQ_Results/" class="md-nav__link">
+        RNA SEQ Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Reagent_Sets/" class="md-nav__link">
+        Reagent Sets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Virus_Neutralization_Results/" class="md-nav__link">
+        Virus Neutralization Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="controlSamples/" class="md-nav__link">
+        Control Samples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.CYTOF/" class="md-nav__link">
+        Experiment Samples - CyTOF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.ELISA/" class="md-nav__link">
+        Experiment Samples - ELISA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.ELISPOT/" class="md-nav__link">
+        Experiment Samples - ELISPOT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.Flow_Cytometry/" class="md-nav__link">
+        Experiment Samples - Flow Cytometry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.Gene_Expression_Array/" class="md-nav__link">
+        Experiment Samples - Gene Expression Array
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.Genotyping_Array/" class="md-nav__link">
+        Experiment Samples - Genotyping Array
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.HAI/" class="md-nav__link">
+        Experiment Samples - HAI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.HLA/" class="md-nav__link">
+        Experiment Samples - HLA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.Image_Histology/" class="md-nav__link">
+        Experiment Samples - Image Histology
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.KIR/" class="md-nav__link">
+        Experiment Samples - KIR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.MBAA/" class="md-nav__link">
+        Experiment Samples - MBAA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.Mass_Spectrometry_Metabolomics/" class="md-nav__link">
+        Experiment Samples - Mass Spectrometry Metabolomics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.Mass_Spectrometry_Proteomics/" class="md-nav__link">
+        Experiment Samples - Mass Spectrometry Proteomics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.Neutralizing_Antibody_Titer/" class="md-nav__link">
+        Experiment Samples - Neutralizing Antibody Titer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.Other/" class="md-nav__link">
+        Experiment Samples - Other
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.QRT-PCR/" class="md-nav__link">
+        Experiment Samples - QRT-PCR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.RNA_Sequencing/" class="md-nav__link">
+        Experiment Samples - RNA Sequencing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experimentSamples.Virus_Neutralization/" class="md-nav__link">
+        Experiment Samples - Virus Neutralization
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experiments/" class="md-nav__link">
+        Experiments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="immuneExposure/" class="md-nav__link">
+        Immune Exposure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interventions/" class="md-nav__link">
+        Interventions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="labTestPanels/" class="md-nav__link">
+        Lab Test Panels
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="labTest_Results/" class="md-nav__link">
+        Lab Test Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="labTests/" class="md-nav__link">
+        Lab Tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="protocols/" class="md-nav__link">
+        Protocols
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="publicRepositories/" class="md-nav__link">
+        Public Repositories
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.Array/" class="md-nav__link">
+        Regents - Array
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.CyTOF/" class="md-nav__link">
+        Regents - CyTOF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.ELISA/" class="md-nav__link">
+        Regents - ELISA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.ELISPOT/" class="md-nav__link">
+        Regents - ELISPOT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.Flow_Cytometry/" class="md-nav__link">
+        Regents - Flow Cytometry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.HAI/" class="md-nav__link">
+        Regents - HAI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.HLA_Typing/" class="md-nav__link">
+        Regents - HLA Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.KIR_Typing/" class="md-nav__link">
+        Regents - KIR Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.MBAA/" class="md-nav__link">
+        Regents - MBAA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.Neutralizing_Antibody_Titer/" class="md-nav__link">
+        Regents - Neutralizing Antibody Titer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.Other/" class="md-nav__link">
+        Regents - Other
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.PCR/" class="md-nav__link">
+        Regents - PCR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.Sequencing/" class="md-nav__link">
+        Regents - Sequencing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reagents.Virus_Neutralization/" class="md-nav__link">
+        Regents - Virus Neutralization
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="subjectAnimals/" class="md-nav__link">
+        Subject Animals
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="treatments/" class="md-nav__link">
+        Treatments
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="overview">Overview</h1>
+<h2 id="standard-template-processing">Standard Template Processing</h2>
+<p>Standard template file processing applies to template files of type single, multiple, compound, or result segment a combined templates. The processing for compound template files applies to each segment of the file assigned to a particular compound-template. For each data row, the following processing steps are applied.</p>
+<div class="highlight"><pre><span></span><code>A. Initial Processing Steps
+        1. (Internal) Template used for processing data rows must be the one that created the data rows.
+        2. Determine the validation_level. If the value is not defined in the template, then the value is set to Standard. The validation_level can be used in Conditions for differing levels of validation. Currently, the only other validation_level defined is Standard and HIPC.
+        3. Add the Data Row to data rows to be processed and inserted into the database table(s)
+        4. Set the line number of the data row for reporting purposes
+B. Processing Steps
+        1. Pre-Rules executed
+        2. Pre-Processing executed
+        3. Foreign Keys executed (user_defined_id and accession data are checked and pre-existing accessions are assigned)
+        4. Files processing executed (only for templates that load files as part of table loads)
+        5. For each Data Row, set the user_defined_id, accession, and ancillary accession(s) as necessary
+                a. Do user_defined_id and accession testing
+                b. Set the user_defined_id and accession
+                c. Set the ancillary accession and ancillary user_defined_id, as necessary
+                d. Add Workspace Tables, as necessary
+        6. The key for the data row is the user_defined_id column, if specified, or a key column, if a Key is specified. The uniqueness of the user_defined_id or key is tested for duplicates.
+        7. File Info Maps processing is executed
+        8. Vocabulary Checks
+                a. Controlled Vocabulary checks
+                b. Preferred Vocabulary checks
+        9. Post-Rules executed
+        10. Post-Processing executed
+        11. Miscellaneous Validation Checks
+                a. Unique Column data column check besides the primary key for a data row
+                b. Required data column(s) check
+                c. Conditional Required data column(s)
+                d. Numeric data column(s) check
+C. Data Row Processing into table rows for insertion.
+        Process each table as specified in the following order: ancillary tables, primary table, workspace tables, and linkage tables.
+        A data row is transformed into one or more table rows as specified by the above XML structures and infra-structure data Upload Tables. The following checks are made to skip certain inserts:
+                1. For a workspace table a key is defined, and a user_defined_id is repeated. Do not add table and workspace table rows for repeats
+                2. If a set of Data Row Column names in the Data Row have empty values, then skip inserting the row into the table
+                3. In the case that the table is a linkage table, it is part of a result template, and it does not have multiple columns, do not add duplicate row
+        Finally, the database columns specified in Column Lengths are checked for column length against the database column lengths.
+D. Process Save Files
+        Process the save file.
+</code></pre></div>
+<h2 id="template-loading-order">Template Loading Order</h2>
+<ul>
+<li>protocols.txt</li>
+<li>reagents.array.txt</li>
+<li>reagents.elisa.txt</li>
+<li>reagents.elispot.txt</li>
+<li>reagents.mbaa.txt</li>
+<li>reagents.flow_cytometry.txt</li>
+<li>reagents.hai.txt</li>
+<li>reagents.cytof.txt</li>
+<li>reagents.neutralizing_antibody_titer.txt</li>
+<li>reagents.pcr.txt</li>
+<li>reagents.sequencing.txt</li>
+<li>reagents.virus_neutralization.txt</li>
+<li>reagents.hla_typing.txt</li>
+<li>reagents.kir_typing.txt</li>
+<li>reagents.other.txt</li>
+<li>reagent_sets.txt</li>
+<li>treatments.txt</li>
+<li>basic_study_design.txt</li>
+<li>subjectanimals.txt</li>
+<li>subjecthumans.txt</li>
+<li>study_design_edit.txt</li>
+<li>adverseevents.txt</li>
+<li>interventions.txt</li>
+<li>assessments.txt</li>
+<li>biosamples.txt</li>
+<li>labtestpanels.txt</li>
+<li>labtests.txt</li>
+<li>labtest_results.txt</li>
+<li>experiments.txt</li>
+<li>controlsamples.txt</li>
+<li>standardcurves.txt</li>
+<li>experimentsamples.flow_cytometry.txt</li>
+<li>experimentsamples.cytof.txt</li>
+<li>experimentsamples.gene_expression_array.txt</li>
+<li>experimentsamples.genotyping_array.txt</li>
+<li>experimentsamples.hla.txt</li>
+<li>experimentsamples.image_histology.txt</li>
+<li>experimentsamples.kir.txt</li>
+<li>experimentsamples.mbaa.txt</li>
+<li>experimentsamples.rna_sequencing.txt</li>
+<li>experimentsamples.other.txt</li>
+<li>experimentsamples.mass_spectrometry_metabolomics.txt</li>
+<li>experimentsamples.mass_spectrometry_proteomics.txt</li>
+<li>experimentsamples.elisa.txt</li>
+<li>experimentsamples.elispot.txt</li>
+<li>experimentsamples.hai.txt</li>
+<li>experimentsamples.virus_neutralization.txt</li>
+<li>experimentsamples.neutralizing_antibody_titer.txt</li>
+<li>experimentsamples.qrt-pcr.txt</li>
+<li>immuneexposure.txt</li>
+<li>publicrepositories.txt</li>
+<li>elisa_results.txt</li>
+<li>elispot_results.txt</li>
+<li>hai_results.txt</li>
+<li>pcr_results.txt</li>
+<li>virus_neutralization_results.txt</li>
+<li>hla_typing.txt</li>
+<li>kir_typing.txt</li>
+<li>rna_seq_results.txt</li>
+<li>mass_spectrometry_metabolomic_results.txt</li>
+<li>mass_spectrometry_proteomic_results.txt</li>
+<li>mbaa_results.txt</li>
+<li>fcm_derived_data.txt</li>
+<li>cytof_derived_data.txt    </li>
+</ul>
+<h2 id="upload-table-information">Upload Table Information</h2>
+<p>Data in the each Data Row is loaded into the a set of tables by the Batch Uploader for a template. The (internal) table FILE_INFO is loaded first so that its file_info_id values are known to the template processing. The order of loading tables is specified by the order of the upload tables for the template, that is, the Ancillary Tables, Primary Template Table, Workspace Tables, and Linkage Tables. The Primary Table defines the uniqueness of each Data Row in the template ile. Each Data Row can cause a table to load zero or more table rows. If Empty Data Row Columns are specified for a given table, then for given Data Row either the row is load nor not. If all of the Data Row Column values in the Empty Data Row Columns are empty values for the Data Row, then the Data Row is not loaded into the table, otherwise it is. The Multiple Columns allows for a table to load multiple rows to a table for a given template file Data Row. In this case, the database columns that will have varying data for the different table rows needs to be matched with a Data Row Column that represents a list as specified in the Template using List Columns. If there are a set of database column mappings to list Data Row Column, then each list must be the same length and each index in the list represents a database row for the given table. The Column Mappings list provides a mechanism for mapping the database column name to a Data Row Column value so that the database column values can be determined. In most cases, the data row columns already defined for the Template are also database column names for the tables to be loaded. In this case, the DATA ROW COLUMN is a hyphen ('-'). However, there can be cases where this is not possible for the set of tables being loaded for a given Template and they are explicitly specified.  Also, Table column checks include column length restrictions. Finally, the Batch Uploader needs to know which tables contain clob columns to specify the insert correctly.  The audit columns for the tables are not explicitly specified (created_by, last_updated_by, upload_ticket_number) in the requirement document since they are evaluated internally by the Batch Uploader</p>
+<h2 id="controlled-vocabulary">Controlled Vocabulary</h2>
+<p>A controlled vocabulary check (Control) consists of checking an input Data Row Column value with a controlled vocabulary list generated from the Lookup Table Name using the specification for the Table Name in Lookup Tables. The check uses case-insensitive check and returns the controlled vocabulary case spelling into the input Data Row Column value. If the check fails and error message is generated, and the validation fails. The LookupTables are used in conjunction with Controlled Vocabulary/Control XML component for checking (case-insensitive) conformance to a controlled vocabulary and for replacing a conformant value with the correct case spelling. For a given Data Content, the column with Alias column name ‘name’ is associated with a database column from which the controlled vocabulary list is generated. There are also Data Content in Lookup Tables that are used only for preferred population marker parsing (See immport-api-docs Population Marker Parsing Tutorial). Finally, there is the lookup Data Content, lk_template_mapping, specified earlier in the document that is used for the determination of information on result files to load into database table file_info and for the generation of path expressions for storing these files into the file system. There is other database column information in the Data Content. This information is used in the generation of the PDF document describing the ImmPort templates.</p>
+<h2 id="key-and-user-defined-id-information">Key and User Defined ID Information</h2>
+<p>The User Defined ID and Key are used for duplicate check within the template file. If two data rows have the same user defined id column value or key column value, then an error is generated. If the user defined ID is defined, then it is used for duplicate checking, otherwise the Key is used. Also, a the user defined ID is used to determine is the data row has been previously loaded into the database. The user defined ID or key is the catenation (using ‘:’) of the data row column values defining the user defined ID. If a user defined ID is provided, then in most cases a corresponding Accession (exceptions exist in study_design_edit). If Key is provided, then an Accession may be provided.</p>
+<h2 id="conditions">Conditions</h2>
+<p>A condition returns either true or false.  If a value is given, the the conditions tests a data row column against the given value and returns either true satisfying the condition being tested or false if it does not satisfy the condition.  If no value is provided, then the condition tests a characteristic of the data row value.</p>
+<h2 id="rule">Rule</h2>
+<p>A rule is a test that needs to return 'true' to be satisfied. A rule either succeeds (true) or fails (false). When s rule is executed, it will return either true or false based on the rule type.  A rule is executed only if all it conditions return true or there are not conditions. If a rule fails, then the validation fails, an error message is generated into the log, and the upload will not occur.</p>
+<h2 id="process">Process</h2>
+<p>A Process is a function that takes input data row column(s), performs a transformation and optionally outputs data row column(s).  Optionally, a process has a set of conditions.  The process is executed only if all conditions are true or there are no conditions.  For set-to-value Process, it can optionally contain a <ProcessOutput> instead of <Input> data row column(s).  The ProcessOutput specifies an action (currently set) and a value.  Optionally, a Process can have an <AppendOutput> which allows an append string to be append to data row column value(s) specified in the <AppendOutput></p>
+<h2 id="validation-queries">Validation Queries</h2>
+<p>Validation Queries are essential for testing the integrity of the upload, ensuring that foreign keys are satisfied before templates can be validated and associated database tables are loaded. Also, validation queries provide for the integrity of table content with respect to user defined IDs and accessions. The Database Table Infos and Validation Queries XML components provide the information for generating SQL queries and processing the results into structures for validation testing in many contexts in the templates as specified below.  All validation Queries require the workspace ID as the parameter input to the SQL query.</p>
+<p>The Database Table Infos provide the substitution column names to values in evaluating a validation query into executable SQL. The standard set of substitution column names used in validation queries include the following: TableName, ParentTable, WorkspaceTableName, UserDefinedIdColumn, SelfAccession, ParentAccession, and optionally either OrderColumn or ResultSchemaColumn.</p>
+<p>The Validation Queries provide the specification of all the validation queries (Validation Query) used in the Batch Uploader. A validation query (Validation Query) consists of a Name that is used throughout the specification of the Templates to identify a validation query.</p>
+<p>The validation query has a SQL string (Sql tag) that contains the Substitution column names defined in Database Table Infos for the given table associated with a validation query in a Template. Also, each SQL query depends on a workspace_id parameter that must be provided to the query for execution. The ColumnNames ColumnName columns map to the columns defined in the SQL query result. Each validation query has an OutParam. This tag defines how to interpret the results of executing the query. The current OutParam tag values include:</p>
+<ul>
+<li>
+<p>HashMap</p>
+<ul>
+<li>The output consists of a HashMap with the key defined by the first ColumnName in ColumnNames, and value consists of the rest of the ColumnName in ColumnNames. If the rest of the ColumnNames ColumnName columns is a single column, then the value is a string defined by this ColumnName. However, if there are several ColumnName columns, then the value is a HashMap where the keys are the ColumnName names, and the values are the column values in the result.</li>
+</ul>
+</li>
+<li>
+<p>HashMap_List</p>
+<ul>
+<li>The output consists of a HashMap with the key defined by the first ColumnName in ColumnNames. The value of the HashMap is a list. The HashMap is constructed as follows. For each result row, the value of the second column is added to the list defined by the first column value.</li>
+</ul>
+</li>
+<li>
+<p>List</p>
+<ul>
+<li>The result is a list of values where each result is a single column value.</li>
+</ul>
+</li>
+</ul>
+<h2 id="file-info-information">File Info Information</h2>
+<p>File checks are used by Templates to save files in the file system and record their information in various tables. Result files have differing file types (File Type). This XML component allows result files specified by the DataRowColumn value to be assigned a file_detail. The Template Name, the file_name (DataRowColumn value), File Type determine the file type using this triple (Template Name, file_name, File Type) and the lk_template_mapping table as specified in Lookup Tables XML component. The file_name, file_detail and the study_accession (Study Accession Column value) is used to store these files into file_info table (file_info template) and into the file system.</p>
+<h2 id="save-file-information">Save File Information</h2>
+<p>File checks are used by Templates to save files in the file system and record their information in various tables. Save a File as Part of the Table Load. The following database tables and their associated templates are processed using the XML structures specified below to identify (File) and save files (SaveFile) into the file system. file_info - ImmPortData/ImmPort.DataUpload.FileInfo.xml, protocol - Templates/ImmPort.DataUpload.protocols.xml, study_file - Templates/ImmPort.DataUpload.basic_study_design.xml and Templates/ImmPort.DataUpload.study_design_edit.xml, and study_image - Templates/ImmPort.DataUpload.study_design_edit.xml. The Path Name is generated using the following processes. in the respective templates: file_info - create-file-info-path-expression, protocol - create-protocol-path-expression, study_file - create-study-file-path-expression, and study_image - create-study-image-path-expression.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../tutorials/fcsheadermarkingparsing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FCS Header Marker Parsing" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              FCS Header Marker Parsing
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="adverseEvents/" class="md-footer__link md-footer__link--next" aria-label="Next: Adverse Events" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Adverse Events
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.integrate", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+        <script src="../javascripts/jquery-3.2.1.js"></script>
+      
+        <script src="../javascripts/bootstrap-3.3.7.js"></script>
+      
+    
+  </body>
+</html>

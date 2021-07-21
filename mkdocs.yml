@@ -1,0 +1,124 @@
+site_name: ImmPort Documentation
+theme:
+  name: material
+  custom_dir: immport_theme
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    #- navigation.expand
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  ##- pymdownx.inlinehilite
+  - admonition
+  - pymdownx.details
+nav:
+  - Home: index.md
+  - Data Query API:
+    - Overview: dataqueryapi/index.md
+    - Assay Results: dataqueryapi/assayresults.md
+    - File Path: dataqueryapi/filepath.md
+    - Lookup Tables: dataqueryapi/lookuptables.md
+    - Study Detail: dataqueryapi/studydetail.md
+    - Python Examples: dataqueryapi/pythonexamples.md
+    - Shell Examples: dataqueryapi/shellexamples.md
+  - File Download:
+    - Overview: filedownload/index.md
+    - Tool: filedownload/tool.md
+    - Python Examples: filedownload/pythonexamples.md
+  - Data Upload API:
+    - Overview: datauploadapi/index.md
+    - API Format and Endpoints: datauploadapi/api.md
+    - Authentication: datauploadapi/authentication.md
+    - Examples: datauploadapi/examples.md
+  - Batch Updater API:
+    - Overview: batchupdaterapi/index.md
+    - API Format and Endpoints: batchupdaterapi/api.md
+    - Authentication: batchupdaterapi/authentication.md
+    - Examples: batchupdaterapi/examples.md
+  - Tutorials:
+    - Overview: tutorials/index.md
+    - Introduction to ImmPort Python Tutorials: tutorials/python.md
+    - Population Marker Parsing: tutorials/populationmarkerparsing.md
+    - FCS Header Marker Parsing: tutorials/fcsheadermarkingparsing.md
+  - Data Submission Templates:
+    - Overview: datasubmission/index.md
+    - Templates:
+      - Adverse Events: datasubmission/adverseEvents.md
+      - Assessments: datasubmission/assessments.md
+      - Basic Study Desgin: datasubmission/basic_study_design.md
+      - BioSamples: datasubmission/bioSamples.md
+      - Study Desgin Edit: datasubmission/study_design_edit.md
+      - Subject Humans: datasubmission/subjectHumans.md
+      - Standard Curves: datasubmission/standardCurves.md
+      - CyTOF Derived data: datasubmission/CyTOF_Derived_data.md
+      - ELISAA Results: datasubmission/ELISA_Results.md
+      - ELISPOT Results: datasubmission/ELISPOT_Results.md
+      - FCM Derived data: datasubmission/FCM_Derived_data.md
+      - HAI Results: datasubmission/HAI_Results.md
+      - HLA Typing: datasubmission/HLA_Typing.md
+      - KIR Typing: datasubmission/KIR_Typing.md
+      - MBAA Results: datasubmission/MBAA_Results.md
+      - Mass Spectrometry Metabolomic Results: datasubmission/Mass_Spectrometry_Metabolomic_Results.md
+      - Mass Spectrometry Proteomic Results: datasubmission/Mass_Spectrometry_Proteomic_Results.md
+      - PCR Results: datasubmission/PCR_Results.md
+      - RNA SEQ Results: datasubmission/RNA_SEQ_Results.md
+      - Reagent Sets: datasubmission/Reagent_Sets.md
+      - Virus Neutralization Results: datasubmission/Virus_Neutralization_Results.md
+      - Control Samples: datasubmission/controlSamples.md
+      - Experiment Samples - CyTOF: datasubmission/experimentSamples.CYTOF.md
+      - Experiment Samples - ELISA: datasubmission/experimentSamples.ELISA.md
+      - Experiment Samples - ELISPOT: datasubmission/experimentSamples.ELISPOT.md
+      - Experiment Samples - Flow Cytometry: datasubmission/experimentSamples.Flow_Cytometry.md
+      - Experiment Samples - Gene Expression Array: datasubmission/experimentSamples.Gene_Expression_Array.md
+      - Experiment Samples - Genotyping Array: datasubmission/experimentSamples.Genotyping_Array.md
+      - Experiment Samples - HAI: datasubmission/experimentSamples.HAI.md
+      - Experiment Samples - HLA: datasubmission/experimentSamples.HLA.md
+      - Experiment Samples - Image Histology: datasubmission/experimentSamples.Image_Histology.md
+      - Experiment Samples - KIR: datasubmission/experimentSamples.KIR.md
+      - Experiment Samples - MBAA: datasubmission/experimentSamples.MBAA.md
+      - Experiment Samples - Mass Spectrometry Metabolomics: datasubmission/experimentSamples.Mass_Spectrometry_Metabolomics.md
+      - Experiment Samples - Mass Spectrometry Proteomics: datasubmission/experimentSamples.Mass_Spectrometry_Proteomics.md
+      - Experiment Samples - Neutralizing Antibody Titer: datasubmission/experimentSamples.Neutralizing_Antibody_Titer.md
+      - Experiment Samples - Other: datasubmission/experimentSamples.Other.md
+      - Experiment Samples - QRT-PCR: datasubmission/experimentSamples.QRT-PCR.md
+      - Experiment Samples - RNA Sequencing: datasubmission/experimentSamples.RNA_Sequencing.md
+      - Experiment Samples - Virus Neutralization: datasubmission/experimentSamples.Virus_Neutralization.md
+      - Experiments: datasubmission/experiments.md
+      - Immune Exposure: datasubmission/immuneExposure.md
+      - Interventions: datasubmission/interventions.md
+      - Lab Test Panels: datasubmission/labTestPanels.md
+      - Lab Test Results: datasubmission/labTest_Results.md
+      - Lab Tests: datasubmission/labTests.md
+      - Protocols: datasubmission/protocols.md
+      - Public Repositories: datasubmission/publicRepositories.md
+      - Regents - Array: datasubmission/reagents.Array.md
+      - Regents - CyTOF: datasubmission/reagents.CyTOF.md
+      - Regents - ELISA: datasubmission/reagents.ELISA.md
+      - Regents - ELISPOT: datasubmission/reagents.ELISPOT.md
+      - Regents - Flow Cytometry: datasubmission/reagents.Flow_Cytometry.md
+      - Regents - HAI: datasubmission/reagents.HAI.md
+      - Regents - HLA Typing: datasubmission/reagents.HLA_Typing.md
+      - Regents - KIR Typing: datasubmission/reagents.KIR_Typing.md
+      - Regents - MBAA: datasubmission/reagents.MBAA.md
+      - Regents - Neutralizing Antibody Titer: datasubmission/reagents.Neutralizing_Antibody_Titer.md
+      - Regents - Other: datasubmission/reagents.Other.md
+      - Regents - PCR: datasubmission/reagents.PCR.md
+      - Regents - Sequencing: datasubmission/reagents.Sequencing.md
+      - Regents - Virus Neutralization: datasubmission/reagents.Virus_Neutralization.md
+      - Subject Animals: datasubmission/subjectAnimals.md
+      - Treatments: datasubmission/treatments.md 
+
+
+
+extra_css:
+  - stylesheets/bootstrap-3.3.7.css
+  - stylesheets/ecosystem.css
+extra_javascript:
+  - javascripts/jquery-3.2.1.js
+  - javascripts/bootstrap-3.3.7.js

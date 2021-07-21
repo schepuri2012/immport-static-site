@@ -1,0 +1,2810 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.11">
+    
+    
+      
+        <title>ELISAA Results - ImmPort Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3754935a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/bootstrap-3.3.7.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/ecosystem.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#template-elisa_results" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <!-- Header -->
+<header class="md-header" data-md-component="header">
+<!-- ImmPort Header -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <a class="navbar-brand active menu-immport-org" href="https://www.immport.org/home" target="_blank">
+	    <img class="main-site-logo" style="display: inline-block;" src="../../img/immport-icon-black-background.png" />
+      <span>ImmPort</span>
+    </a>
+    <div class="container-fluid ecoSystemHeader">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-target-menu-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-site-main" id="navbar-target-menu-collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+		    <img class="main-site-logo" src="../../img/immport-private-data-icon-black-background.png" />
+              Upload<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://www.immport.org/resources/dataTemplates" target="_blank">How to Upload Data</a></li>
+              <li><a href="https://immport.niaid.nih.gov/research/study/studysearchmain#/studysearch" target="_blank">Search Private Data</a></li>
+              <li><a href="https://immport.niaid.nih.gov/upload/data/uploadDataMain" target="_blank">Upload Data Package</a></li>
+              <li><a href="https://immport.niaid.nih.gov/validate/data/validateDataMain" target="_blank">Validate Data Package</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="https://www.immport.org/shared" target="_blank">
+		    <img class="main-site-logo" src="../../img/immport-shared-data-icon-black-background.png" />
+              Shared
+            </a>
+          </li>
+          <li>
+            <a href="https://galaxy.immport.org" target="_blank">
+		    <img class="main-site-logo" src="../../img/immport-data-analysis-icon-black-background.png" />
+              Analysis
+            </a>
+          </li>
+          <li>
+            <a href="https://www.immport.org/resources" target="_blank">
+		    <img class="main-site-logo" src="../../img/immport-resources-icon-black-background.png" />
+              Resources
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="mailto:ImmPort_Helpdesk@immport.org">Contact ImmPort</a>
+              <li><a href="https://www.immport.org/about" target="_blank">What is ImmPort?</a></li>
+              <li><a href="https://www.immport.org/cite" target="_blank">How to cite ImmPort</a></li>
+              <li><a href="https://www.immport.org/shared/news" target="_blank">News/Events</a></li>
+              <li><a href="https://www.immport.org/shared/teamCurrent" target="_blank">Team</a></li>
+              <li><a href="https://www.immport.org/shared/dataProviders" target="_blank">Data Providers</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Data<span class="caret"></span></a>
+             <ul class="dropdown-menu" role="menu">
+               <li><a href="https://browser.immport.org/browser?path=" target="_blank">Download</a></li>
+               <li><a href="https://www.immport.org/resources/dataTemplates" target="_blank">Upload</a></li>
+               <li><a href="https://www.immport.org/resources/tutorials">Tutorials</a></li>
+               <li><a href="https://galaxy.immport.org" target="_blank">Analyze</a></li>
+             </ul>
+          </li>
+        </ul>
+
+        <div class="form-group col-md-2 col-sm-2 navbar-right searchBox">
+          <form action="https://www.immport.org/search" target="_blank" method="GET">
+            <div class="input-group searchBtnGrp">
+              <span class="input-group-btn2">
+                <input name="searchTerm" type="text" class="form-control input-sm searchInput" placeholder="Search www.immport.org"/>
+              </span>
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary btn-sm searchButton" id="search"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+         </div>
+       </div>
+
+     </div>
+   </nav>
+
+
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    <!-- Link to home -->
+    <a
+      href="../.."
+      title="ImmPort Documentation"
+      class="md-header__button md-logo"
+      aria-label="ImmPort Documentation"
+      data-md-component="logo"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ImmPort Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ELISAA Results
+            
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette -->
+    
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+
+      <!-- Search interface -->
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Repository information -->
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dataqueryapi/" class="md-tabs__link">
+        Data Query API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../filedownload/" class="md-tabs__link">
+        File Download
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../datauploadapi/" class="md-tabs__link">
+        Data Upload API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../batchupdaterapi/" class="md-tabs__link">
+        Batch Updater API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tutorials/" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Data Submission Templates
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ImmPort Documentation" class="md-nav__button md-logo" aria-label="ImmPort Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ImmPort Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Data Query API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Query API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Query API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/assayresults/" class="md-nav__link">
+        Assay Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/filepath/" class="md-nav__link">
+        File Path
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/lookuptables/" class="md-nav__link">
+        Lookup Tables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/studydetail/" class="md-nav__link">
+        Study Detail
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/pythonexamples/" class="md-nav__link">
+        Python Examples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataqueryapi/shellexamples/" class="md-nav__link">
+        Shell Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        File Download
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="File Download" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          File Download
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filedownload/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filedownload/tool/" class="md-nav__link">
+        Tool
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filedownload/pythonexamples/" class="md-nav__link">
+        Python Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Data Upload API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Upload API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Data Upload API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datauploadapi/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datauploadapi/api/" class="md-nav__link">
+        API Format and Endpoints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datauploadapi/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datauploadapi/examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Batch Updater API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Batch Updater API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Batch Updater API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../batchupdaterapi/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../batchupdaterapi/api/" class="md-nav__link">
+        API Format and Endpoints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../batchupdaterapi/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../batchupdaterapi/examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/python/" class="md-nav__link">
+        Introduction to ImmPort Python Tutorials
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/populationmarkerparsing/" class="md-nav__link">
+        Population Marker Parsing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/fcsheadermarkingparsing/" class="md-nav__link">
+        FCS Header Marker Parsing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Data Submission Templates
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data Submission Templates" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Data Submission Templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" checked>
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        Templates
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adverseEvents/" class="md-nav__link">
+        Adverse Events
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assessments/" class="md-nav__link">
+        Assessments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_study_design/" class="md-nav__link">
+        Basic Study Desgin
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bioSamples/" class="md-nav__link">
+        BioSamples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../study_design_edit/" class="md-nav__link">
+        Study Desgin Edit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjectHumans/" class="md-nav__link">
+        Subject Humans
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standardCurves/" class="md-nav__link">
+        Standard Curves
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CyTOF_Derived_data/" class="md-nav__link">
+        CyTOF Derived data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ELISAA Results
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ELISAA Results
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#template-columns" class="md-nav__link">
+    Template Columns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-key-information" class="md-nav__link">
+    Template Key Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-row-column-information" class="md-nav__link">
+    Data Row Column Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foreign-key-information" class="md-nav__link">
+    Foreign Key Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-table-information" class="md-nav__link">
+    Upload Table Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postrules-in-order" class="md-nav__link">
+    PostRules (in order):
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocesses-in-order" class="md-nav__link">
+    PreProcesses (in order):
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postprocesses-in-order" class="md-nav__link">
+    PostProcesses (in order):
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preferred-vocabularies" class="md-nav__link">
+    Preferred Vocabularies
+  </a>
+  
+    <nav class="md-nav" aria-label="Preferred Vocabularies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#column-analyte_reported-table-lk_analyte" class="md-nav__link">
+    Column: analyte_reported Table: lk_analyte
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-unit_reported-table-lk_concentration_unit" class="md-nav__link">
+    Column: unit_reported Table: lk_concentration_unit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preferred-vocabulary-tables" class="md-nav__link">
+    Preferred Vocabulary Tables
+  </a>
+  
+    <nav class="md-nav" aria-label="Preferred Vocabulary Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lk_analyte" class="md-nav__link">
+    lk_analyte
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lk_concentration_unit" class="md-nav__link">
+    lk_concentration_unit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ELISPOT_Results/" class="md-nav__link">
+        ELISPOT Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FCM_Derived_data/" class="md-nav__link">
+        FCM Derived data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HAI_Results/" class="md-nav__link">
+        HAI Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HLA_Typing/" class="md-nav__link">
+        HLA Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KIR_Typing/" class="md-nav__link">
+        KIR Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MBAA_Results/" class="md-nav__link">
+        MBAA Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mass_Spectrometry_Metabolomic_Results/" class="md-nav__link">
+        Mass Spectrometry Metabolomic Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mass_Spectrometry_Proteomic_Results/" class="md-nav__link">
+        Mass Spectrometry Proteomic Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PCR_Results/" class="md-nav__link">
+        PCR Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RNA_SEQ_Results/" class="md-nav__link">
+        RNA SEQ Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reagent_Sets/" class="md-nav__link">
+        Reagent Sets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Virus_Neutralization_Results/" class="md-nav__link">
+        Virus Neutralization Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controlSamples/" class="md-nav__link">
+        Control Samples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.CYTOF/" class="md-nav__link">
+        Experiment Samples - CyTOF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.ELISA/" class="md-nav__link">
+        Experiment Samples - ELISA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.ELISPOT/" class="md-nav__link">
+        Experiment Samples - ELISPOT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.Flow_Cytometry/" class="md-nav__link">
+        Experiment Samples - Flow Cytometry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.Gene_Expression_Array/" class="md-nav__link">
+        Experiment Samples - Gene Expression Array
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.Genotyping_Array/" class="md-nav__link">
+        Experiment Samples - Genotyping Array
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.HAI/" class="md-nav__link">
+        Experiment Samples - HAI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.HLA/" class="md-nav__link">
+        Experiment Samples - HLA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.Image_Histology/" class="md-nav__link">
+        Experiment Samples - Image Histology
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.KIR/" class="md-nav__link">
+        Experiment Samples - KIR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.MBAA/" class="md-nav__link">
+        Experiment Samples - MBAA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.Mass_Spectrometry_Metabolomics/" class="md-nav__link">
+        Experiment Samples - Mass Spectrometry Metabolomics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.Mass_Spectrometry_Proteomics/" class="md-nav__link">
+        Experiment Samples - Mass Spectrometry Proteomics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.Neutralizing_Antibody_Titer/" class="md-nav__link">
+        Experiment Samples - Neutralizing Antibody Titer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.Other/" class="md-nav__link">
+        Experiment Samples - Other
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.QRT-PCR/" class="md-nav__link">
+        Experiment Samples - QRT-PCR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.RNA_Sequencing/" class="md-nav__link">
+        Experiment Samples - RNA Sequencing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimentSamples.Virus_Neutralization/" class="md-nav__link">
+        Experiment Samples - Virus Neutralization
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiments/" class="md-nav__link">
+        Experiments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../immuneExposure/" class="md-nav__link">
+        Immune Exposure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interventions/" class="md-nav__link">
+        Interventions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../labTestPanels/" class="md-nav__link">
+        Lab Test Panels
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../labTest_Results/" class="md-nav__link">
+        Lab Test Results
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../labTests/" class="md-nav__link">
+        Lab Tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocols/" class="md-nav__link">
+        Protocols
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publicRepositories/" class="md-nav__link">
+        Public Repositories
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.Array/" class="md-nav__link">
+        Regents - Array
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.CyTOF/" class="md-nav__link">
+        Regents - CyTOF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.ELISA/" class="md-nav__link">
+        Regents - ELISA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.ELISPOT/" class="md-nav__link">
+        Regents - ELISPOT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.Flow_Cytometry/" class="md-nav__link">
+        Regents - Flow Cytometry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.HAI/" class="md-nav__link">
+        Regents - HAI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.HLA_Typing/" class="md-nav__link">
+        Regents - HLA Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.KIR_Typing/" class="md-nav__link">
+        Regents - KIR Typing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.MBAA/" class="md-nav__link">
+        Regents - MBAA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.Neutralizing_Antibody_Titer/" class="md-nav__link">
+        Regents - Neutralizing Antibody Titer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.Other/" class="md-nav__link">
+        Regents - Other
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.PCR/" class="md-nav__link">
+        Regents - PCR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.Sequencing/" class="md-nav__link">
+        Regents - Sequencing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reagents.Virus_Neutralization/" class="md-nav__link">
+        Regents - Virus Neutralization
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjectAnimals/" class="md-nav__link">
+        Subject Animals
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../treatments/" class="md-nav__link">
+        Treatments
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="template-elisa_results">Template: <strong>elisa_results</strong></h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Template Type</td>
+<td>multiple</td>
+</tr>
+<tr>
+<td>Schema Version</td>
+<td>3.33</td>
+</tr>
+<tr>
+<td>Standard File Name</td>
+<td>ELISA_Results.txt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="template-columns">Template Columns</h3>
+<table>
+<thead>
+<tr>
+<th>Template Column Name</th>
+<th>Data Row Column Name</th>
+<th>Description</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analyte Reported</td>
+<td>analyte_reported</td>
+<td>The analyte describes what is being measured in an assay. The list of values displays common immunology terms on the left and their preferred term on the right, separated by a semi-colon. Please select a name from the list provided if the name matches your name or enter a name if there is not an appropriate one provided. This name is visible when the result is shared.</td>
+<td>The analyte is the target (e.g protein, DNA, RNA) that is being assayed by the reagent. The list of values displays common immunology terms on the left and their preferred term on the right, separated by a semi-colon. Please select a name from the list provided if the name matches your name or enter a name if there is not an appropriate one provided. This name is visible when the result is shared.</td>
+</tr>
+<tr>
+<td>Comments</td>
+<td>comments</td>
+<td>Unstructured text to further describe the result.</td>
+<td>Unstructured text to further describe the result.</td>
+</tr>
+<tr>
+<td>Expsample ID</td>
+<td>expsample_id</td>
+<td>The experiment sample identifier must be stored in ImmPort or in the experimentsamples.txt template.</td>
+<td>Please enter either an experiment sample user defined ID or ImmPort accession.</td>
+</tr>
+<tr>
+<td>Unit Reported</td>
+<td>unit_reported</td>
+<td>The analyte's concentration unit.</td>
+<td>The analyte's concentration unit.</td>
+</tr>
+<tr>
+<td>Value Reported</td>
+<td>value_reported</td>
+<td>The analyte's concentration value.</td>
+<td>The analyte's concentration value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="template-key-information">Template Key Information</h3>
+<table>
+<thead>
+<tr>
+<th>DATA ROW COLUMN(S)</th>
+<th>TYPE</th>
+<th>ACCESSION COLUMN</th>
+<th>ACCESSION PREFIX</th>
+<th>ACCESSION SEQUENCE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result_id</td>
+<td>KEY</td>
+<td>result_id</td>
+<td>-</td>
+<td>elisa_result_seq</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-row-column-information">Data Row Column Information</h3>
+<table>
+<thead>
+<tr>
+<th>DATA ROW COLUMN NAME</th>
+<th>REQUIRED</th>
+<th>CONDITIONAL REQUIRED</th>
+<th>CONTROLLED VOCABULARY</th>
+<th>PREFERRED VOCABULARY</th>
+<th>PREFERRED DATA ROW COLUMN</th>
+<th>GLOBAL</th>
+<th>LIST</th>
+<th>CONSTANT</th>
+<th>NUMERIC TYPE</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>analyte_reported</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>lk_analyte</td>
+<td>analyte_preferred</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>expsample_id</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>file_info_ids</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>immunology_symbol</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>lk_analyte</td>
+<td>immunology_symbol</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>max_components</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>yes</td>
+<td>-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>result_schemas</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>short_label</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>lk_analyte</td>
+<td>short_label</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>unit_reported</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>lk_concentration_unit</td>
+<td>unit_preferred</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>value_preferred</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>float</td>
+<td>-</td>
+</tr>
+<tr>
+<td>value_reported</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="foreign-key-information">Foreign Key Information</h3>
+<p>FOREIGN KEY TYPE:   user-defined-id Input column is a User Defined ID and the Output column is the Accession associated with User Defined ID in the given table if the input is a user defined ID</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>INPUT COLUMN</th>
+<th>OUTPUT COLUMN</th>
+<th>TABLE NAME</th>
+<th>VALIDATION QUERY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>expsample_id</td>
+<td>expsample_accession</td>
+<td>expsample</td>
+<td>getAvailableUserDefinedIdsMap</td>
+</tr>
+</tbody>
+</table>
+<p>FOREIGN KEY TYPE:   accession   Input column is an Accession and the Output column is the Accession in the given table if the input is defined and an accession</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>INPUT COLUMN</th>
+<th>OUTPUT COLUMN</th>
+<th>TABLE NAME</th>
+<th>VALIDATION QUERY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>expsample_id</td>
+<td>expsample_accession</td>
+<td>expsample</td>
+<td>getAvailableAccsToParentMap</td>
+</tr>
+</tbody>
+</table>
+<p>FOREIGN KEY TYPE:   accession-to-accession  Input column is an Accession and Output column is the parent Accession associated with the Accession in given table if the input column is defined and an accession</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>INPUT COLUMN</th>
+<th>OUTPUT COLUMN</th>
+<th>TABLE NAME</th>
+<th>VALIDATION QUERY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>experiment_accession</td>
+<td>study_accession</td>
+<td>experiment</td>
+<td>getAvailableAccsToParentMap</td>
+</tr>
+</tbody>
+</table>
+<h3 id="upload-table-information">Upload Table Information</h3>
+<p>Table: elisa_result    Type: primary</p>
+<table>
+<thead>
+<tr>
+<th>COLUMN NAME</th>
+<th>COLUMN TYPE</th>
+<th>COLUMN LENGTH</th>
+<th>COLUMN LEN CHECK</th>
+<th>CLOB CHECK</th>
+<th>EMPTY DATA ROW COLUMNS</th>
+<th>DATA ROW COLUMN</th>
+<th>MULITPLE ROWS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>analyte_preferred</td>
+<td>varchar</td>
+<td>15</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>analyte_reported</td>
+<td>varchar</td>
+<td>100</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>varchar</td>
+<td>500</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>experiment_accession</td>
+<td>varchar</td>
+<td>15</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>expsample_accession</td>
+<td>varchar</td>
+<td>15</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>file_info_id</td>
+<td>integer</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>result_file_info_id</td>
+<td>-</td>
+</tr>
+<tr>
+<td>result_id</td>
+<td>integer</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>unit_preferred</td>
+<td>varchar</td>
+<td>50</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>unit_reported</td>
+<td>varchar</td>
+<td>200</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>value_preferred</td>
+<td>float</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>value_reported</td>
+<td>varchar</td>
+<td>50</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>Table: expsample_2_file_info    Type: linkage</p>
+<table>
+<thead>
+<tr>
+<th>COLUMN NAME</th>
+<th>COLUMN TYPE</th>
+<th>COLUMN LENGTH</th>
+<th>COLUMN LEN CHECK</th>
+<th>CLOB CHECK</th>
+<th>EMPTY DATA ROW COLUMNS</th>
+<th>DATA ROW COLUMN</th>
+<th>MULITPLE ROWS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>expsample_accession</td>
+<td>varchar</td>
+<td>15</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>file_info_id</td>
+<td>integer</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>file_info_ids</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>result_schema</td>
+<td>varchar</td>
+<td>50</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>result_schemas</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="postrules-in-order">PostRules (in order):</h3>
+<table>
+<thead>
+<tr>
+<th>RULE TYPE</th>
+<th>RULE NAME</th>
+<th>CONDITIONS</th>
+<th>DATA ROW COLUMNS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>simple type</td>
+<td>check-result-schema-for-accession</td>
+<td>-</td>
+<td>['expsample', 'expsample_accession', 'rs_result_schema', 'getEntityToResultSchemaMap']</td>
+</tr>
+</tbody>
+</table>
+<h3 id="preprocesses-in-order">PreProcesses (in order):</h3>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add-semi-colon-if-needed</td>
+<td>-</td>
+<td>[analyte_reported, max_components, left]</td>
+<td>[analyte_reported]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break-into-components</td>
+<td>-</td>
+<td>[analyte_reported]</td>
+<td>[immunology_symbol, short_label, analyte_reported]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>convert-to-float</td>
+<td>-</td>
+<td>[value_reported]</td>
+<td>[value_preferred]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>determine-template-file-name</td>
+<td>-</td>
+<td>[]</td>
+<td>[result_file_name]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>determine-file-info-ids</td>
+<td>-</td>
+<td>[result_file_name]</td>
+<td>[result_file_info_id]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set-file-info</td>
+<td>-</td>
+<td>[result_file_name, result]</td>
+<td>[result_schema]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get-result-schema-result</td>
+<td>-</td>
+<td>[]</td>
+<td>[rs_result_schema]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="postprocesses-in-order">PostProcesses (in order):</h3>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>convert-concentration-and-round</td>
+<td>Provided Below</td>
+<td>[unit_preferred, value_preferred]</td>
+<td>[unit_preferred, value_preferred]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>CONDITION NAME  DATA ROW COLUMN VALUE
+not-empty-value analyte_preferred   -
+not-empty-value unit_preferred  -
+not-empty-value value_preferred -
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set-and-check-study-accession</td>
+<td>-</td>
+<td>[study_accession]</td>
+<td>[]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add-accession-to-file-info-for-result</td>
+<td>Provided Below</td>
+<td>[expsample_accession, result_file_info_id]</td>
+<td>[file_info_id]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>CONDITION NAME  DATA ROW COLUMN VALUE
+not-empty-value expsample_accession -
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>PROCESS NAME</th>
+<th>CONDITIONS</th>
+<th>INPUT DATA ROW COLUMNS</th>
+<th>OUTPUT DATA ROW COLUMNS</th>
+<th>PROCESS RULE</th>
+<th>APPEND OUTPUT</th>
+<th>SHOW INFORMATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add-data-to-lists</td>
+<td>Provided Below</td>
+<td>[file_info_id, result_schema]</td>
+<td>[file_info_ids, result_schemas]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>CONDITION NAME  DATA ROW COLUMN VALUE
+not-empty-value file_info_id    -
+</code></pre></div>
+<h3 id="preferred-vocabularies">Preferred Vocabularies</h3>
+<h4 id="column-analyte_reported-table-lk_analyte">Column: analyte_reported Table: lk_analyte</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>REPORTED DATA ROW COLUMN</th>
+<th>PREFERRED DATA ROW COLUMN</th>
+<th>XML PREFERRED TABLE COLUMN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>immunology_symbol</td>
+<td>immunology_symbol</td>
+<td>immunology_symbol</td>
+</tr>
+<tr>
+<td></td>
+<td>short_label</td>
+<td>short_label</td>
+<td>short_label</td>
+</tr>
+<tr>
+<td></td>
+<td>analyte_reported</td>
+<td>analyte_preferred</td>
+<td>analyte_preferred</td>
+</tr>
+</tbody>
+</table>
+<h4 id="column-unit_reported-table-lk_concentration_unit">Column: unit_reported Table: lk_concentration_unit</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>REPORTED DATA ROW COLUMN</th>
+<th>PREFERRED DATA ROW COLUMN</th>
+<th>XML PREFERRED TABLE COLUMN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>unit_reported</td>
+<td>unit_preferred</td>
+<td>concentration_unit_preferred</td>
+</tr>
+</tbody>
+</table>
+<h3 id="preferred-vocabulary-tables">Preferred Vocabulary Tables</h3>
+<h4 id="lk_analyte">lk_analyte</h4>
+<table>
+<thead>
+<tr>
+<th>lk_analyte</th>
+<th>lk_analyte</th>
+<th>database</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>XML COLUMNS</td>
+<td>analyte_preferred</td>
+<td>immunology_symbol</td>
+</tr>
+<tr>
+<td></td>
+<td>DATABASE COLUMNS</td>
+<td>analyte_accession</td>
+<td>immunology_symbol</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lk_concentration_unit">lk_concentration_unit</h4>
+<table>
+<thead>
+<tr>
+<th>lk_concentration_unit</th>
+<th>lk_unit_of_measure</th>
+<th>database</th>
+<th>type in ('concentration','Not_Specified')</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>XML COLUMNS</td>
+<td>concentration_unit_preferred</td>
+<td>description</td>
+</tr>
+<tr>
+<td></td>
+<td>DATABASE COLUMNS</td>
+<td>name</td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../CyTOF_Derived_data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CyTOF Derived data" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              CyTOF Derived data
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ELISPOT_Results/" class="md-footer__link md-footer__link--next" aria-label="Next: ELISPOT Results" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              ELISPOT Results
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.integrate", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+        <script src="../../javascripts/jquery-3.2.1.js"></script>
+      
+        <script src="../../javascripts/bootstrap-3.3.7.js"></script>
+      
+    
+  </body>
+</html>
