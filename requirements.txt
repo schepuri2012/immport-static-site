@@ -1,0 +1,5 @@
+# requirements.txt
+python = "^3.8"
+mkdocs = "^1.2.2"
+mkdocs-material = "^7.1.11"
+pymdown-extensions = "^8.2"
